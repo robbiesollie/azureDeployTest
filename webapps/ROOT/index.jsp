@@ -5,11 +5,11 @@
 <head>
     <title>Tech Connect</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -17,7 +17,8 @@
 <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.jsp"><img src="assets/icon.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -79,39 +80,36 @@
 </div>
 <!-------about----->
 <section id="about">
-   <div class="container">
-       <div class="row">
-           <div class="col-md-6">
-               <h2>About Tech Connect</h2>
-               <div class="about-content">
-                   The name is derived from the overarching goal to be the people that stand in the gap and connect front line strategic technological needs with willing and able solution providers.
-               </div>
-               <button type="button"class="btn btn-primary" >Read More
-               </button>
-           </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Tech Connect</h2>
+                <div class="about-content">
+                    The name is derived from the overarching goal to be the people that stand in the gap and connect
+                    front line strategic technological needs with willing and able solution providers.
+                </div>
+                <form action = "about.jsp">
+                    <button id="ReadMore" class="btn btn-primary" value = "button">Read More</button>
+                </form>
+               <!-- <button type="button" class="btn btn-primary">Read More</button>-->
+            </div>
+            <div class="col-md-6 skills-bar">
+                <p>Project 1</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width:80%;">80%</div>
+                </div>
+                <p>Project 2</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width:70%;">70%</div>
+                </div>
+                <p>Project 3</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width:60%;">60%</div>
+                </div>
+            </div>
 
-               <jsp:useBean id="cart" scope="session" class="techConnect.Login" />
-           <% cart.methodTest(); %>
-
-
-
-           <div class="col-md-6 skills-bar">
-               <p>Project 1</p>
-               <div class="progress">
-                   <div class="progress-bar" style="width:80%;">80%</div>
-               </div>
-               <p>Project 2</p>
-               <div class="progress">
-                   <div class="progress-bar" style="width:70%;">70%</div>
-               </div>
-               <p>Project 3</p>
-               <div class="progress">
-                   <div class="progress-bar" style="width:60%;">60%</div>
-               </div>
-           </div>
-
-       </div>
-   </div>
+        </div>
+    </div>
 </section>
 </body>
 </html>

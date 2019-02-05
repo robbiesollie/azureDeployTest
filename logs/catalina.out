@@ -1940,3 +1940,130 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 04-Feb-2019 17:12:28.267 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1001 ms
 AAAAAAAA
 Ye this should work too??
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Feb-2019 00:00:56.685 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.13
+05-Feb-2019 00:00:56.689 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 2 2018 14:27:55 UTC
+05-Feb-2019 00:00:56.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.13.0
+05-Feb-2019 00:00:56.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+05-Feb-2019 00:00:56.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.14.2
+05-Feb-2019 00:00:56.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+05-Feb-2019 00:00:56.690 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home
+05-Feb-2019 00:00:56.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.1+13-LTS
+05-Feb-2019 00:00:56.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+05-Feb-2019 00:00:56.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:00:56.691 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:00:56.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Feb-2019 00:00:56.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Feb-2019 00:00:56.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Feb-2019 00:00:56.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/The_Gate/Desktop/apache-tomcat-9.0.13/conf/logging.properties
+05-Feb-2019 00:00:56.694 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Feb-2019 00:00:56.695 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Feb-2019 00:00:56.695 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+05-Feb-2019 00:00:56.695 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Feb-2019 00:00:56.695 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+05-Feb-2019 00:00:56.695 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:00:56.696 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:00:56.696 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/The_Gate/Desktop/apache-tomcat-9.0.13/temp
+05-Feb-2019 00:00:56.696 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/The_Gate/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+05-Feb-2019 00:00:56.735 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Feb-2019 00:00:56.759 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+05-Feb-2019 00:00:56.778 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+05-Feb-2019 00:00:56.779 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+05-Feb-2019 00:00:56.780 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 530 ms
+05-Feb-2019 00:00:56.843 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Feb-2019 00:00:56.843 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.13
+05-Feb-2019 00:00:56.852 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/The_Gate/Desktop/apache-tomcat-9.0.13/webapps/ROOT]
+05-Feb-2019 00:00:57.254 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/The_Gate/Desktop/apache-tomcat-9.0.13/webapps/ROOT] has finished in [401] ms
+05-Feb-2019 00:00:57.257 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Feb-2019 00:00:57.266 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+05-Feb-2019 00:00:57.268 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 488 ms
+null
+test
+null
+test
+05-Feb-2019 00:31:07.846 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+05-Feb-2019 00:31:07.847 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Feb-2019 00:31:07.856 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+05-Feb-2019 00:31:07.864 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Feb-2019 00:31:07.878 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Feb-2019 00:31:07.881 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+05-Feb-2019 00:31:07.883 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+05-Feb-2019 00:31:07.884 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Feb-2019 00:31:09.714 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.13
+05-Feb-2019 00:31:09.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 2 2018 14:27:55 UTC
+05-Feb-2019 00:31:09.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.13.0
+05-Feb-2019 00:31:09.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+05-Feb-2019 00:31:09.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.14.2
+05-Feb-2019 00:31:09.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+05-Feb-2019 00:31:09.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home
+05-Feb-2019 00:31:09.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.1+13-LTS
+05-Feb-2019 00:31:09.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+05-Feb-2019 00:31:09.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:31:09.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:31:09.728 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Feb-2019 00:31:09.728 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Feb-2019 00:31:09.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Feb-2019 00:31:09.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/The_Gate/Desktop/apache-tomcat-9.0.13/conf/logging.properties
+05-Feb-2019 00:31:09.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Feb-2019 00:31:09.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Feb-2019 00:31:09.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+05-Feb-2019 00:31:09.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Feb-2019 00:31:09.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+05-Feb-2019 00:31:09.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:31:09.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/The_Gate/Desktop/apache-tomcat-9.0.13
+05-Feb-2019 00:31:09.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/The_Gate/Desktop/apache-tomcat-9.0.13/temp
+05-Feb-2019 00:31:09.731 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/The_Gate/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+05-Feb-2019 00:31:09.775 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Feb-2019 00:31:09.797 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+05-Feb-2019 00:31:09.809 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+05-Feb-2019 00:31:09.811 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+05-Feb-2019 00:31:09.811 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 525 ms
+05-Feb-2019 00:31:09.856 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Feb-2019 00:31:09.856 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.13
+05-Feb-2019 00:31:09.864 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/The_Gate/Desktop/apache-tomcat-9.0.13/webapps/ROOT]
+05-Feb-2019 00:31:10.253 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/The_Gate/Desktop/apache-tomcat-9.0.13/webapps/ROOT] has finished in [388] ms
+05-Feb-2019 00:31:10.255 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+05-Feb-2019 00:31:10.264 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+05-Feb-2019 00:31:10.266 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 454 ms
+null
+test
+null
+test2
+null
+test2
+null
+test2
+null
+test3
+null
+test3
+null
+test3
+null
+test3
+null
+test4
+null
+test4
+null
+test4
+class java.util.Collections$3
+null
+test4
+[ memberType]
+null
+test4
+[ memberType]
+Select
+test4
+[memberType, fName]
+Select
+test4
+[memberType, fName]
+null
+test4
+[]
+Select
+test4
+[memberType, fName]
