@@ -89,9 +89,12 @@
                <button type="button"class="btn btn-primary" >Read More
                </button>
            </div>
-           <%
-               Login test = new Login();
-           %>
+
+               <jsp:useBean id="cart" scope="session" class="techConnect.Login" />
+           <% cart.methodTest(); %>
+
+
+
            <div class="col-md-6 skills-bar">
                <p>Project 1</p>
                <div class="progress">
