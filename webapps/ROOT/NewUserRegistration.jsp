@@ -16,11 +16,15 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <head>
-        <title>Registration page</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width = device-width, intial-scale = 1">
-    </head>
+    <title>Registration page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, intial-scale = 1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
 <body>
 <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -48,11 +52,13 @@
     </nav>
 </section>
 <h1>Welcome to TechConnect!</h1>
-<h2><center><b>We are excited to have another member join our community! </b></center></h2>
+<h2>
+    <center><b>We are excited to have another member join our community! </b></center>
+</h2>
 <p>
-    <center>
-        <b>Please enter the following information so we can get to know you better!</b> <br>
-    </center>
+<center>
+    <b>Please enter the following information so we can get to know you better!</b> <br>
+</center>
 </p>
 <!-- AQL this section is designed to grab the necessary elements the database needs for creating a person -->
 <!-- AQL doesn't take into consideration the different qualities of solution providers over project providers-->
@@ -62,42 +68,42 @@
         <div class="form-group">
             <label> Are you representing a group?</label> <br>
             <input type="radio" name="group" value="yes">yes <br>
-            <input type="radio" name="group" value="no"> no  <br>
+            <input type="radio" name="group" value="no"> no <br>
         </div>
         <div class="form-group">
             <label> Are you the primary contact? </label> <br>
             <input type="radio" name="primary" value="yes">yes <br>
-            <input type="radio" name="primary" value="no"> no  <br>
+            <input type="radio" name="primary" value="no"> no <br>
         </div>
 
-        <div class = "form-group">
-            <label for = "primaryEmail">Primary email for communication: </label> <br>
-            <input type = "text" class = form-control" id = "primaryEmail"  placeholder = "primary Email" >
+        <div class="form-group">
+            <label for="primaryEmail">Primary email for communication: </label> <br>
+            <input type="text" class=form-control" id="primaryEmail" placeholder="primary Email">
         </div>
 
-        <div class = "form-group">
-            <label for = "affiliation"> Affiliation:  </label>
-            <input type= "text" class = "form-control" id = "affiliation" placeholder= "Affiliation">
+        <div class="form-group">
+            <label for="affiliation"> Affiliation: </label>
+            <input type="text" class="form-control" id="affiliation" placeholder="Affiliation">
         </div>
 
-        <div class= "form-group">
-            <label for = "Location"> Location: </label>
-            <input type = "text" class = "form-control" id = "Location" placeholder="Location">
+        <div class="form-group">
+            <label for="Location"> Location: </label>
+            <input type="text" class="form-control" id="Location" placeholder="Location">
         </div>
         <!-- https://www.tutorialspoint.com/jsp/jsp_file_uploading.htm -->
-        <div class = "form-group">
-            <label for = "file"> If you would like to upload an introduction of yourself or a resume please upload here: </label> <br>
+        <div class="form-group">
+            <label for="file"> If you would like to upload an introduction of yourself or a resume please upload
+                here: </label> <br>
             Select a file to upload: <br>
-            <form action = "UploadServlet" method = "post" enctype = "multipart/form-data">
-                <input type = "file" class = "form-control" id = "file" size = "50" /><br>
-                <input type = "submit" value = "Upload File" />
+            <form action="UploadServlet" method="post" enctype="multipart/form-data">
+                <input type="file" class="form-control" id="file" size="50"/><br>
+                <input type="submit" value="Upload File"/>
             </form>
         </div>
     </form>
-    <form action = "Profile.jsp">
-        <button id="submit" class="btn btn-primary" value = "next">Done!</button>
+    <form action="Profile.jsp">
+        <button id="submit" class="btn btn-primary" value="next">Done!</button>
     </form>
-
 
 
 </section>
