@@ -38,10 +38,14 @@
                 <li class="nav-item">
                     <a class="nav-link " href="about.jsp">About</a>
                 </li>
+                <li class = "nav-item">
+                    <a class = "nav-link" href="managementPage.jsp">Help</a>
+                </li>
             </ul>
         </div>
     </nav>
 </section>
+
 <section id="login-forms">
     <h1>Welcome! Please register below.</h1>
 
