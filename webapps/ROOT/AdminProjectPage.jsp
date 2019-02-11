@@ -81,11 +81,11 @@
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Advice
+                                                            Unassigned
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            26 June 2018
+                                                            posted
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -122,11 +122,11 @@
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            110 Views
+                                                            assigned
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            26 June 2018
+                                                            posted
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -163,11 +163,11 @@
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            110 Views
+                                                            Assigned
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            26 June 2018
+                                                            posted
                                                         </li>
                                                     </ul>
                                                 </div>
