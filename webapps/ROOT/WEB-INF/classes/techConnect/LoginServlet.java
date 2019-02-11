@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
         try
         {
 
-            UserBean user = new UserBean();
+            techConnect.UserBean user = new UserBean();
             user.setUserName(request.getParameter("emailName"));
             user.setPassword(request.getParameter("emailPassword"));
 
@@ -30,11 +30,11 @@ public class LoginServlet extends HttpServlet {
 
                 HttpSession session = request.getSession(true);
                 session.setAttribute("currentSessionUser",user);
-                response.sendRedirect(); //after login
+                response.sendRedirect(""); //after login
             }
 
             else
-                response.sendRedirect(); //error if no match
+                response.sendRedirect("login.jsp"); //error if no match
         }
 
 

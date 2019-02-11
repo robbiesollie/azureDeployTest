@@ -6,7 +6,7 @@
            version="3.1">
     <servlet>
         <servlet-name>login</servlet-name>
-        <servlet-class>techConnect.login</servlet-class>
+        <servlet-class>techConnect.LoginServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
