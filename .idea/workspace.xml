@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e94d4e5-38aa-4897-9485-f7f22a13a071" name="Default Changelist" comment="">
+    <list default="true" id="5e94d4e5-38aa-4897-9485-f7f22a13a071" name="Default Changelist" comment="adding management page">
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/AdminProjectPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,32 +17,27 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="43" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminProjectPage.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/AdminProjectPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="186" column="48" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/ROOT/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solutionProvider.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/solutionProvider.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/projects.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+            <state relative-caret-position="612">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -54,8 +45,30 @@
       <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/ROOT/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
+            <state relative-caret-position="-273">
+              <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solutionProvider.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/solutionProvider.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="609" column="107" selection-start-line="609" selection-start-column="107" selection-end-line="609" selection-end-column="107" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#6;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,11 +82,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewUserRegistration.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewUserRegistration.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/ROOT/NewUserRegistration.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="70" />
+            <state relative-caret-position="255">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/projects.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,17 +112,17 @@
       <file leaf-file-name="about.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/ROOT/about.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="-1258">
+              <caret line="27" column="87" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUpload.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/FileUpload.jsp">
+      <file leaf-file-name="managementPage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/managementPage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="404">
+              <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -121,6 +152,8 @@
         <option value="$PROJECT_DIR$/webapps/ROOT/solutionProvider.jsp" />
         <option value="$PROJECT_DIR$/webapps/ROOT/ProjectForm.jsp" />
         <option value="$PROJECT_DIR$/webapps/ROOT/about.jsp" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/AdministrationProjects.jsp" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/AdminProjectPage.jsp" />
       </list>
     </option>
   </component>
@@ -146,11 +179,14 @@
     <option name="width" value="811" />
     <option name="height" value="866" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,7 +197,7 @@
             <path>
               <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
               <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="temp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
@@ -174,13 +210,18 @@
               <item name="webapps" type="462c0819:PsiDirectoryNode" />
               <item name="ROOT" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
+              <item name="webapps" type="462c0819:PsiDirectoryNode" />
+              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -488,6 +529,14 @@
       <workItem from="1548979052402" duration="5000" />
       <workItem from="1548990580576" duration="3231000" />
     </task>
+    <task id="LOCAL-00001" summary="adding management page">
+      <created>1549920247856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549920247856</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -508,10 +557,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22769000" />
+    <option name="totallyTimeSpent" value="23715000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3187" y="-13" width="1946" height="1066" extended-state="6" />
+    <frame x="-6" y="-6" width="1613" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -521,7 +570,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="4" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32990354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
@@ -532,21 +581,47 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7504823" visible="true" weight="0.36495537" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7504823" weight="0.36449865" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49119717" visible="true" weight="0.1391258" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49119717" visible="true" weight="0.20514469" />
       <window_info id="Web" order="2" sideWeight="0.50880283" side_tool="true" weight="0.21208227" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.8464865" weight="0.3292683" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.24951768" side_tool="true" weight="0.09756097" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49119717" visible="true" weight="0.1391258" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Maven" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info id="Web" order="2" sideWeight="0.50880283" side_tool="true" weight="0.21208227" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49713877" weight="0.32891566" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="UI Designer" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49713877" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7504823" visible="true" weight="0.36495537" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.8464865" weight="0.32968536" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Designer" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,6 +629,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding management page" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding management page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -569,6 +648,94 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/NewUserRegistration.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-239">
+          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/ProjectProvider.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/projects.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="43" column="10" lean-forward="true" selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/solutionProvider.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="609" column="107" selection-start-line="609" selection-start-column="107" selection-end-line="609" selection-end-column="107" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/about.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1258">
+          <caret line="27" column="87" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/aboutPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/managementPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="37" column="39" lean-forward="true" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -723,8 +890,17 @@
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/web.xml" />
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/projects.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+        <state relative-caret-position="221">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -733,25 +909,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
+        <state relative-caret-position="-273">
+          <caret line="41" column="14" lean-forward="true" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/SolutionProviderProfile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/SolutionProvider.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/SolutionProviderProfile.jsp" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/SolutionProvider.jsp" />
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/FileUpload.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -759,27 +923,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-end-line="13" />
+        <state relative-caret-position="612">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/ProjectForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/ProjectForm.jsp" />
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/solutionProvider.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="255">
+          <caret line="609" column="107" selection-start-line="609" selection-start-column="107" selection-end-line="609" selection-end-column="107" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#6;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#7;n#a#0;n#ul#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -792,15 +960,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/about.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="-1258">
+          <caret line="27" column="87" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/NewUserRegistration.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="70" />
+        <state relative-caret-position="255">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/AdministrationProjects.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/AdminProjectPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="186" column="48" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
         </state>
       </provider>
     </entry>
