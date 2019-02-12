@@ -2,7 +2,7 @@ package techConnect;
 import techConnect.*;
 public class Login{
     public Login() {
-        Test t = new Test();
+        //Test t = new Test();
     }
 
     public void methodTest() {
