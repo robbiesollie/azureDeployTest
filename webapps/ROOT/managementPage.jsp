@@ -1,5 +1,5 @@
 <%@ page import="java.util.Date" %><%-- Created by IntelliJ IDEA. --%>
-<%@ page import="techConnect.Login"%>
+<%@ page import="techConnect.Login" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -52,21 +52,38 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/joshua-rawson-harris-668614-unsplash.jpg" class="d-block img-fluid" alt="...">
+                <a href="https://www.skype.com/en/"><img src="assets/PMLinks/Computers_Skype.jpg" alt="SkypeLogo.png"
+                                                         width="1600" height="900"></a>
                 <div class="carousel-caption">
-                    <h5>Connecting the world.</h5>
+                    <h5>Make calls around the world.</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/mi-pham-763590-unsplash.jpg" class="d-block img-fluid" alt="...">
+                <a href="https://trello.com/"><img src="assets/PMLinks/trello.png" alt="TrelloLogo.png" width="1600"
+                                                   height="900"></a>
                 <div class="carousel-caption">
-                    <h5>Help contribute.</h5>
+                    <h5>Keep track of things to do!</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/dlanor-s-703975-unsplash.jpg" class="d-block img-fluid" alt="...">
+                <a href="https://github.com/"><img src="assets/PMLinks/githubcat.jpg" alt="github.png" width="1600"
+                                                   height="900"> </a>
                 <div class="carousel-caption">
-                    <h5>Utilize your skills.</h5>
+                    <h5>Connect your files everywhere.</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://slack.com/"><img src="assets/PMLinks/slackRobot.png" alt="SlackLogo.png" width="1600"
+                                                  height="900"> </a>
+                <div class="carousel-caption">
+                    <h5>Talk to people anywhere, anytime.</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://drive.google.com/"><img src="assets/PMLinks/Google-Drive.jpg" alt="driveLogo.png"
+                                                         width="1600" height="900"> </a>
+                <div class="carousel-caption">
+                    <h5></h5>
                 </div>
             </div>
         </div>
@@ -80,37 +97,30 @@
         </a>
     </div>
 
+    <section id="projectLinks">
+        <form>
+            <div>
+                <a href="https://www.skype.com/en/"><img src="assets/PMLinks/skype.gif" alt="SkypeLogo.gif" width="254"
+                                                         height="254"></a>
+                <a href="https://trello.com/"><img src="assets/PMLinks/taco-preloader.gif" alt="TrelloLogo.gif"
+                                                   width="254" height="254"></a>
+                <a href="https://github.com/"><img src="assets/PMLinks/trelloCat.gif" alt=Github.gif" width="254"
+                                                   height="254"> </a>
+                <a href="https://slack.com/"><img src="assets/PMLinks/slack.gif" alt="SlackLogo.gif" width="254"
+                                                  height="254"> </a>
+                <a href="https://www.google.com/drive/"><img src="assets/PMLinks/google.gif" alt="GoogleDriveLogo.gif"
+                                                             width="500" height="500"></a>
+
+            </div>
+        </form>
+    </section>
+
 </div>
 <!-------about----->
 <section id="about">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>About Tech Connect</h2>
-                <div class="about-content">
-                    The name is derived from the overarching goal to be the people that stand in the gap and connect
-                    front line strategic technological needs with willing and able solution providers.
-                </div>
-                <form action = "about.jsp">
-                    <button id="ReadMore" class="btn btn-primary" value = "button">Read More</button>
-                </form>
-               <!-- <button type="button" class="btn btn-primary">Read More</button>-->
-            </div>
-            <div class="col-md-6 skills-bar">
-                <p>Project 1</p>
-                <div class="progress">
-                    <div class="progress-bar" style="width:80%;">80%</div>
-                </div>
-                <p>Project 2</p>
-                <div class="progress">
-                    <div class="progress-bar" style="width:70%;">70%</div>
-                </div>
-                <p>Project 3</p>
-                <div class="progress">
-                    <div class="progress-bar" style="width:60%;">60%</div>
-                </div>
-            </div>
-
+        <div class="about-content">
+            <h5>Project Management is essential to reach the targeted goal.  Click on any of the links above to find excellent resources.<h5>
         </div>
     </div>
 </section>
