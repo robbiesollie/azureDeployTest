@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="TechConnectDB@tconect.database.windows.net" uuid="8860c1ba-c47d-47cd-bc18-ca7c06c83d30">
+    <data-source source="LOCAL" name="TechConnectDB@tconect.database.windows.net" uuid="9d53782e-edd9-4f64-b598-2dac3f78aaa0">
       <driver-ref>azure.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
