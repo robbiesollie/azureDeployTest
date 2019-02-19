@@ -93,4 +93,35 @@ public class UserDAO
         return bean;
 
     }
+
+    public static void registration(UserBean bean) {
+        String insertionQuery = "INSERT INTO users (user_name, pass, email) VALUES (?, ?, ?)";
+        try {
+            currentCon = ConnectionManager.getConnection();
+            PreparedStatement insertStmt = currentCon.prepareStatement(insertionQuery);
+            insertStmt.setString(1, bean.getUsername());
+            insertStmt.setString(2, bean.getPassword());
+            insertStmt.setString(3, bean.getEmail());
+            insertStmt.executeUpdate();
+        }
+        catch (SQLException e) {
+            System.out.println("failed to register" + e.getMessage());
+        }
+    }
+
+    //Does this username already exist?
+    public static boolean getUsername(String username) {
+        String searchQuery = "SELECT userID FROM users WHERE username=?";
+        ResultSet results;
+        try {
+            currentCon = ConnectionManager.getConnection();
+            PreparedStatement getStmt = currentCon.prepareStatement(searchQuery);
+            getStmt.setString(1, username);
+            results = getStmt.executeQuery();
+            return results == null;
+        }
+        catch (SQLException e) {
+            return false;
+        }
+    }
 }
