@@ -11,23 +11,23 @@ public class PublicProjectDAO {
         DB = new DBWrapper();
     }
 
-    public void setPublicProject(PublicProjectBean bean) throws java.sql.SQLException {
+    public void setPublicProject(publicProjectBean bean) throws java.sql.SQLException {
         if(bean.getProviderID() != null && bean.getName() != null && bean.getProposal() != null) {
             DB.addPublicProject(bean.getProviderID(), bean.getName(), bean.getProposal());
         }
     }
 
-    public PublicProjectBean getPublicProject(String name) throws java.sql.SQLException {
+    public publicProjectBean getPublicProject(String name) throws java.sql.SQLException {
         if(name != null) {
             ResultSet rs = DB.getPublicProjects(name);
-            PublicProjectBean bean = makeBean(rs);
+            publicProjectBean bean = makeBean(rs);
             rs.close();
             return bean;
         }
         return null;
     }
 
-    public Queue<PublicProjectBean> getPublicProject(int projectID) throws java.sql.SQLException {
+    public Queue<publicProjectBean> getPublicProject(int projectID) throws java.sql.SQLException {
         if(projectID > 0) {
             ResultSet rs = DB.getPublicProjects(projectID);
             return makeBeanQueue(rs);
@@ -35,13 +35,13 @@ public class PublicProjectDAO {
         return null;
     }
 
-    public Queue<PublicProjectBean> getPublicProject() throws java.sql.SQLException {
+    public Queue<publicProjectBean> getPublicProject() throws java.sql.SQLException {
         ResultSet rs = DB.getPublicProjects();
         return makeBeanQueue(rs);
     }
 
-    private Queue<PublicProjectBean> makeBeanQueue(ResultSet rs) throws java.sql.SQLException {
-        Queue<PublicProjectBean> beanSet = new LinkedList<>();
+    private Queue<publicProjectBean> makeBeanQueue(ResultSet rs) throws java.sql.SQLException {
+        Queue<publicProjectBean> beanSet = new LinkedList<>();
         do {
             beanSet.add(makeBean(rs));
         }while(rs.next());
@@ -49,8 +49,8 @@ public class PublicProjectDAO {
         return beanSet;
     }
 
-    private PublicProjectBean makeBean(ResultSet rs) throws java.sql.SQLException {
-        PublicProjectBean bean = new PublicProjectBean();
+    private publicProjectBean makeBean(ResultSet rs) throws java.sql.SQLException {
+        publicProjectBean bean = new publicProjectBean();
         bean.setProjectID(rs.getInt(1));
         bean.setProviderID(rs.getInt(2));
         bean.setName(rs.getString(3));
@@ -59,4 +59,3 @@ public class PublicProjectDAO {
         return bean;
     }
 }
-
