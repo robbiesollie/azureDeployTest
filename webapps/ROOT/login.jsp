@@ -1,4 +1,3 @@
-<%@ page import="java.util.Date" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -32,6 +31,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="about.jsp">About</a>
+                </li>
+                <li class = "nav-item">
+                    <a class = "nav-link" href="managementPage.jsp">Help</a>
                 </li>
             </ul>
         </div>
