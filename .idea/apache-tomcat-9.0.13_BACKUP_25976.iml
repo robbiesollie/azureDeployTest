@@ -85,16 +85,12 @@
 <<<<<<< HEAD
 =======
       <sourceFolder url="file://$MODULE_DIR$/webapps/ROOT/WEB-INF/lib" type="java-resource" />
->>>>>>> developer
+>>>>>>> ad47a097d02ad0e082a68caf6f909f2daca75b79
       <sourceFolder url="file://$MODULE_DIR$/webapps/ROOT/WEB-INF/classes" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="commons-io-2.6" level="project" />
-<<<<<<< HEAD
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6 (2)" level="project" />
-=======
     <orderEntry type="library" name="catalina-tribes" level="project" />
     <orderEntry type="library" name="servlet-api" level="project" />
     <orderEntry type="library" name="bin" level="project" />
@@ -122,6 +118,5 @@
     <orderEntry type="library" name="lib2" level="project" />
     <orderEntry type="library" name="lib3" level="project" />
     <orderEntry type="library" exported="" name="lib4" level="project" />
->>>>>>> developer
   </component>
 </module>
