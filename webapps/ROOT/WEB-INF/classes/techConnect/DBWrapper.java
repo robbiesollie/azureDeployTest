@@ -17,19 +17,18 @@ public class DBWrapper{
     Connection connection;
 
     public DBWrapper() {
-        //
         hostName = "tconect.database.windows.net"; // update me
         dbName = "TechConnectDB"; // update me
         user = "cbuStudents"; // update me
         password = "Angel1996"; // update me
-        url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;"
-                + "hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
+        url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;" + "hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
+        //url = "jdbc:sqlserver://tconect.database.windows.net:1433;database=TechConnectDB";
         connection = null;
     }
 
     private ResultSet sendQuery(String query) {
         try {
-            System.out.println("=========================================");
+            System.out.println(url);
             connection = DriverManager.getConnection(url);
             System.out.println("=========================================");
             String schema = connection.getSchema();
