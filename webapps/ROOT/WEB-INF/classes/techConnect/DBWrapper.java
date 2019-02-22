@@ -28,33 +28,24 @@ public class DBWrapper{
 
     private ResultSet sendQuery(String query) {
         try {
-            System.out.println(url);
+            //System.out.println(url);
             connection = DriverManager.getConnection(url);
-            System.out.println("=========================================");
+            //System.out.println("=========================================");
             String schema = connection.getSchema();
-            System.out.println("Successful connection - Schema: " + schema);
+            //System.out.println("Successful connection - Schema: " + schema);
 
-            System.out.println("Query data example:");
-            System.out.println("=========================================");
+            //System.out.println("Query data example:");
+            //System.out.println("=========================================");
 
             // Create and execute a SELECT SQL statement.
-            String selectSql = query;
-
-            try (Statement statement = connection.createStatement();
-                 ResultSet resultSet = statement.executeQuery(selectSql)) {
-
-                // Print results from select statement
-                //System.out.println("Top 20 categories:");
-                while (resultSet.next())
-                {
-                    System.out.println(resultSet.getString(1) + " " + resultSet.getString(2));
-                }
-                connection.close();
-                //return resultSet;
-            }
+            //String selectSql = query;
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            resultSet.next();
+            return resultSet;
         }
         catch (Exception e) {
-            System.out.println("kkk");
+            //System.out.println("kkk");
             e.printStackTrace();
         }
         return null;
@@ -63,36 +54,6 @@ public class DBWrapper{
     public void testQ (String q) {
         sendQuery(q);
     }
-    /*public DBWrapper() {
-        try {
-            String connectionUrl = "tconect.database.windows.net";
-            Connection con = null;
-            Statement stmt = null;
-            //ResultSet rs = null;
-            Class.forName("tconect.database.windows.net");
-            con = DriverManager.getConnection(connectionUrl);
-            //String SQL = "select smth from tableName where smth";
-            stmt = con.createStatement();
-            //rs = stmt.executeQuery(query);
-            //return rs;
-        } catch (Exception e) {
-            throw new IllegalArgumentException(e);
-            //return null;
-        }
-    }
-
-    //Code based on (https://stackoverflow.com/questions/19514881/java-how-retrieve-data-from-database)
-    //Submits given query and returns the result set
-    private ResultSet sendQuery(String query) {
-        //Submit query
-        if(verrifyQuery(query)) {
-            ResultSet rs = null;
-            rs = stmt.executeQuery(query);
-            return rs;
-        }
-        throw new IllegalArgumentException("Dangerous Query detected");
-        //return null;
-    }*/
 
     //Creates a problem provider if userType = 'P', a solution provider if 'S', or both if 'B'
     public void addUser(char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate) throws java.sql.SQLException {
@@ -275,11 +236,13 @@ public class DBWrapper{
     //Creates query to add a public project
     public void addPublicProject(int providerID, String pName, String proposal) throws java.sql.SQLException {
         //code
-        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0;";
+        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
         ResultSet rs = sendQuery(query);
+        //rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO public_project VALUES (" + ID + ");";
         sendQuery(query);
+        rs.close();
     }
 
     //Gets all public projects
@@ -303,8 +266,9 @@ public class DBWrapper{
     //Creates query to add a private project
     public void addPrivateProject(int providerID, int adminID, String pName, String proposal) throws java.sql.SQLException {
         //code
-        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0);";
+        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
         ResultSet rs = sendQuery(query);
+        //rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO private_project VALUES (" + ID + ", " + adminID + ");";
         sendQuery(query);

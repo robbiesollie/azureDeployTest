@@ -13,7 +13,7 @@ public class PrivateProjectDAO {
 
     public void setPrivateProject(privateProjectBean bean) throws java.sql.SQLException {
         if(bean.getProviderID() != null && bean.getAdminID() != null && bean.getName() != null && bean.getProposal() != null) {
-            DB.addPublicProject(bean.getProviderID(), bean.getName(), bean.getProposal());
+            DB.addPrivateProject(bean.getProviderID(), bean.getAdminID(), bean.getName(), bean.getProposal());
         }
     }
 

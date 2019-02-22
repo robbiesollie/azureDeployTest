@@ -21,7 +21,7 @@ public class PublicProjectDAO {
         if(name != null) {
             ResultSet rs = DB.getPublicProjects(name);
             publicProjectBean bean = makeBean(rs);
-            rs.close();
+            //rs.close();
             return bean;
         }
         return null;
@@ -30,6 +30,7 @@ public class PublicProjectDAO {
     public Queue<publicProjectBean> getPublicProject(int projectID) throws java.sql.SQLException {
         if(projectID > 0) {
             ResultSet rs = DB.getPublicProjects(projectID);
+            //rs.next();
             return makeBeanQueue(rs);
         }
         return null;
@@ -37,6 +38,7 @@ public class PublicProjectDAO {
 
     public Queue<publicProjectBean> getPublicProject() throws java.sql.SQLException {
         ResultSet rs = DB.getPublicProjects();
+        //rs.next();
         return makeBeanQueue(rs);
     }
 
@@ -44,13 +46,14 @@ public class PublicProjectDAO {
         Queue<publicProjectBean> beanSet = new LinkedList<>();
         do {
             beanSet.add(makeBean(rs));
-        }while(rs.next());
+        } while(rs.next());
         rs.close();
         return beanSet;
     }
 
     private publicProjectBean makeBean(ResultSet rs) throws java.sql.SQLException {
         publicProjectBean bean = new publicProjectBean();
+        //rs.next();
         bean.setProjectID(rs.getInt(1));
         bean.setProviderID(rs.getInt(2));
         bean.setName(rs.getString(3));
