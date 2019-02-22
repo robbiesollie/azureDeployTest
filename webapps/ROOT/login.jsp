@@ -41,7 +41,7 @@
 </section>
 <section id="login-forms">
     <p>Login</p>
-    <form>
+    <form action="LoginServlet">
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
