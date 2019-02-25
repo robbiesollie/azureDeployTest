@@ -65,12 +65,12 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="first-name">First name: </label>
-            <input type="text" class="form-control" id="first-name" aria-describedby="name" placeholder="First name">
+            <label for="first_name">First name: </label>
+            <input type="text" class="form-control" id="first_name" aria-describedby="name" placeholder="First name">
         </div>
         <div class="form-group">
-            <label for="last-name">Last name: </label>
-            <input type="text" class="form-control" id="last-name" aria-describedby="name" placeholder="Last name">
+            <label for="last_name">Last name: </label>
+            <input type="text" class="form-control" id="last_name" aria-describedby="name" placeholder="Last name">
         </div>
 
         <div class="form-group">
