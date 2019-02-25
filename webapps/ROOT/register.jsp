@@ -74,8 +74,8 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address: </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <label for="email">Email address: </label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
@@ -94,7 +94,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
         -->
     </form>
-    <form action = "NewUserRegistration.jsp">
+    <form action = "RegistrationServlet">
         <button id="submit" class="btn btn-primary" value = "next">Next</button>
     </form>
         <!--AQL I took this out because at this point it isn't necessary
