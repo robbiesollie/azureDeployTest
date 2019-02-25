@@ -22,9 +22,9 @@ public class RegistrationServlet extends HttpServlet {
             user.setFirstName(req.getParameter("first-name"));
             user.setLastName(req.getParameter("last-name"));
             user.setUserName(req.getParameter("userName"));
-            user.setPassword(req.getParameter("password"));
             user.setEmail(req.getParameter("email"));
             if (!UserDAO.getUsername(user.getUsername())) {
+
                 UserDAO.registration(user);
                 resp.sendRedirect("login.jsp");
             }
@@ -36,4 +36,5 @@ public class RegistrationServlet extends HttpServlet {
             System.out.println(e);
         }
     }
+
 }
