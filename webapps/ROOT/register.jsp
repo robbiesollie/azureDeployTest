@@ -43,9 +43,9 @@
     </nav>
 </section>
 <section id="login-forms">
-    <h1>Welcome! Please register below.</h1>
+    <h2><center>Welcome! Please register below.</center></h2>
 
-    <form>
+    <form action="RegistrationServlet">
         <div class = "form-group">
             <!-- AQL
             hopefully able to connect this to a different registration page that takes into consideration differences between users
@@ -65,27 +65,27 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="first-name">First name: </label>
-            <input type="text" class="form-control" id="first-name" aria-describedby="name" placeholder="First name">
+            <label for="first_name">First name: </label>
+            <input type="text" class="form-control" id="first_name" name="first-name" aria-describedby="name" placeholder="First name">
         </div>
         <div class="form-group">
-            <label for="last-name">Last name: </label>
-            <input type="text" class="form-control" id="last-name" aria-describedby="name" placeholder="Last name">
+            <label for="last_name">Last name: </label>
+            <input type="text" class="form-control" id="last_name" name="last-name" aria-describedby="name" placeholder="Last name">
         </div>
 
         <div class="form-group">
             <label for="email">Email address: </label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password: </label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" class="form-control" id="exampleInputPassword1" name = "password" placeholder="Password">
         </div>
         <!-- AQL added another password box for password verification -->
         <div class = "form-group">
             <label for = "passwordVerification"> Enter your password again: </label>
-            <input type= "text" class = "form-control" id = "passwordVerification" placeholder= "Password Verification">
+            <input type= "text" class = "form-control" id = "passwordVerification" name = "passwordVerify" placeholder= "Password Verification">
         </div>
 
         <!--
@@ -93,8 +93,6 @@
         Below was originally JB's button
         <button type="submit" class="btn btn-primary">Submit</button>
         -->
-    </form>
-    <form action = "RegistrationServlet">
         <button id="submit" class="btn btn-primary" value = "next">Next</button>
     </form>
         <!--AQL I took this out because at this point it isn't necessary

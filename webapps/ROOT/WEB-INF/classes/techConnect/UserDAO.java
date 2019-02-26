@@ -1,127 +1,58 @@
 package techConnect;
 
+import java.sql.ResultSet;
+import java.util.LinkedList;
+import java.util.Queue;
 
-import java.sql.*;
+//A DAO which creates methods static across every type
+public class UserDAO extends DAO {
 
-public class UserDAO
-{
-    static Connection currentCon = null;
-    static ResultSet rs = null;
-
-
-
-    public static UserBean login(UserBean bean)  {
-
-        //preparing some objects for connection
-        Statement stmt = null;
-
-        String username = bean.getUsername();
-        String password = bean.getPassword();
-
-        String searchQuery =
-                "select * from users where username='"
-                        + username
-                        + "' AND password='"
-                        + password
-                        + "'";
-
-        //Prints out username/password if found, null if not
-        System.out.println("Your user name is " + username);
-        System.out.println("Your password is " + password);
-        System.out.println("Query: "+searchQuery);
-
-        try
-        {
-            //connect to DB
-            currentCon = techConnect.ConnectionManager.getConnection();
-            stmt=currentCon.createStatement();
-            rs = stmt.executeQuery(searchQuery);
-            boolean more = rs.next();
-
-            // if user does not exist set the isValid variable to false
-            if (!more)
-            {
-                System.out.println("Sorry, you are not a registered user! Please sign up first");
-                bean.setValid(false);
-            }
-
-            //if user exists set the isValid variable to true
-            else if (more)
-            {
-                String firstName = rs.getString("FirstName");
-                String lastName = rs.getString("LastName");
-
-                System.out.println("Welcome " + firstName);
-                bean.setFirstName(firstName);
-                bean.setLastName(lastName);
-                bean.setValid(true);
-            }
+    //creates a user who provides both problems and solutions
+    public void setDoubleProvider(providerBean bean, Boolean solutionProvider) throws java.sql.SQLException {
+        //char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate
+        if(bean.getUserName() != null && bean.getPassword() != null && bean.getEmail() != null && bean.getAffiliation() != null && bean.getLocation() != null && bean.getGroup() != null) {
+            DB.addUser('B', bean.getUserName(), bean.getPassword(), bean.getEmail(), bean.getAffiliation(), bean.getLocation(), bean.getGroup(), false);
         }
+    }
 
-        catch (Exception ex)
-        {
-            System.out.println("Log In failed: An Exception has occurred! " + ex);
+    //login for users who provide solutions and problems
+    public providerBean doubleProviderLogin(providerBean bean) throws java.sql.SQLException {
+        if(bean.getUserName() != null && bean.getPassword() != null) {
+            ResultSet rs = DB.doubleProviderLogin(bean.getUserName(), bean.getPassword());
+            return makeBean(rs);
         }
+        return null;
+    }
 
-        //some exception handling
-        finally
-        {
-            if (rs != null)	{
-                try {
-                    rs.close();
-                } catch (Exception e) {}
-                rs = null;
-            }
-
-            if (stmt != null) {
-                try {
-                    stmt.close();
-                } catch (Exception e) {}
-                stmt = null;
-            }
-
-            if (currentCon != null) {
-                try {
-                    currentCon.close();
-                } catch (Exception e) {
-                }
-
-                currentCon = null;
-            }
+    //makes changes to a user's data
+    public void updateUser(providerBean bean, providerBean oldBean) throws java.sql.SQLException {
+        if(bean.getUserName() != null && bean.getPassword() != null && bean.getEmail() != null && bean.getAffiliation() != null && bean.getLocation() != null && oldBean.getUserName() != null && oldBean.getPassword() != null) {
+            DB.updateUser(bean.getUserName(), bean.getPassword(), bean.getEmail(), bean.getAffiliation(), bean.getLocation(), bean.getGroup(), false, oldBean.getUserName(), oldBean.getPassword());
         }
+    }
 
+    //Creates a queue of provider beans
+    protected Queue<providerBean> makeBeanQueue(ResultSet rs) throws java.sql.SQLException {
+        Queue<providerBean> beanSet = new LinkedList<>();
+        do {
+            beanSet.add(makeBean(rs));
+        } while(rs.next());
+        rs.close();
+        return beanSet;
+    }
+
+    //creates a provider bean from a result set.
+    protected providerBean makeBean(ResultSet rs) throws java.sql.SQLException {
+        providerBean bean = new providerBean();
+        //rs.next();
+        bean.setUserID(rs.getInt("userID"));
+        bean.setUserName(rs.getString("user_name"));
+        bean.setPassword(rs.getString("pass"));
+        bean.setAffiliation(rs.getString(""));
+        bean.setEmail(rs.getString("email"));
+        bean.setLocation(rs.getString("location"));
+        bean.setGroup(rs.getBoolean("in_group"));
+        bean.setActive(rs.getBoolean("active"));
         return bean;
-
-    }
-
-    public static void registration(UserBean bean) {
-        String insertionQuery = "INSERT INTO users (user_name, pass, email) VALUES (?, ?, ?)";
-        try {
-            currentCon = ConnectionManager.getConnection();
-            PreparedStatement insertStmt = currentCon.prepareStatement(insertionQuery);
-            insertStmt.setString(1, bean.getUsername());
-            insertStmt.setString(2, bean.getPassword());
-            insertStmt.setString(3, bean.getEmail());
-            insertStmt.executeUpdate();
-        }
-        catch (SQLException e) {
-            System.out.println("failed to register" + e.getMessage());
-        }
-    }
-
-    //Does this username already exist?
-    public static boolean getUsername(String username) {
-        String searchQuery = "SELECT userID FROM users WHERE username=?";
-        ResultSet results;
-        try {
-            currentCon = ConnectionManager.getConnection();
-            PreparedStatement getStmt = currentCon.prepareStatement(searchQuery);
-            getStmt.setString(1, username);
-            results = getStmt.executeQuery();
-            return results == null;
-        }
-        catch (SQLException e) {
-            return false;
-        }
     }
 }
