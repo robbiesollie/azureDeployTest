@@ -1,5 +1,6 @@
 package techConnect;
 
+//bean containing data for users
 public class UserBean {
 
     private String username;

@@ -1,7 +1,7 @@
 package techConnect;
 
-//Contains a project providers data
-public class projectProviderBean {
+//Bean containg data for all users
+public class providerBean {
     Integer userID;
     String userName;
     String password;
@@ -11,9 +11,20 @@ public class projectProviderBean {
     Boolean group;
     Boolean active;
 
+    public providerBean() {
+        this.userID = null;
+        this.userName = null;
+        this.password = null;
+        this.affiliation = null;
+        this.email = null;
+        this.location = null;
+        this.group = null;
+        this.active = null;
+    }
+
     public void setUserID(int userID){ this.userID = userID; }
 
-    public int getUserID(){ return this.userID; }
+    public Integer getUserID(){ return this.userID; }
 
     public void setUserName(String userName){ this.userName = userName; }
 

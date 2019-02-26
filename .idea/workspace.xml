@@ -2,29 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad71e093-ec40-4c40-81c0-3fc236ab4953" name="Default" comment="login / register servlet">
-      <change beforePath="$PROJECT_DIR$/.idea/apache-tomcat-9.0.13.iml" afterPath="$PROJECT_DIR$/.idea/apache-tomcat-9.0.13.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8860c1ba-c47d-47cd-bc18-ca7c06c83d30.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/8860c1ba-c47d-47cd-bc18-ca7c06c83d30.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/storage_v2/_src_/database/TechConnectDB.0oRHcw/schema/dbo.sYMBAA.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/storage_v2/_src_/database/TechConnectDB.0oRHcw/schema/dbo.sYMBAA.meta" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/storage_v2/_src_/database/TechConnectDB.0oRHcw/schema/dbo.sYMBAA.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/storage_v2/_src_/database/TechConnectDB.0oRHcw/schema/dbo.sYMBAA.zip" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/conf/web.xml" afterPath="$PROJECT_DIR$/conf/web.xml" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ConnectionManager.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ConnectionManager.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/Login.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/Login.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/LoginServlet.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/web.xml" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ContactDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SkillDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/adminDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/bean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/contactBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/mediaBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/mediaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/providerBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/skillBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8860c1ba-c47d-47cd-bc18-ca7c06c83d30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apache-tomcat-9.0.13/techConnect/DBWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apache-tomcat-9.0.13/techConnect/PrivateProjectDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apache-tomcat-9.0.13/techConnect/PublicProjectDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apache-tomcat-9.0.13/techConnect/UserDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apache-tomcat-9.0.13/techConnect/privateProjectBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apache-tomcat-9.0.13/techConnect/publicProjectBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/apache-tomcat-9.0.13/techConnect/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DBWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DBWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PrivateProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PrivateProjectDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectProviderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectProviderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PublicProjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PublicProjectDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SolutionProviderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SolutionProviderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectProviderBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectProviderBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/publicProjectBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/publicProjectBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/solutionProviderBean.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,52 +49,21 @@
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TechConnectDB@tconect.database.windows.net" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TechConnectDB@tconect.database.windows.net" type="feb32156:DbDataSourceImpl" />
-        <item name="TechConnectDB: database" type="bdf80c8a:MssqlImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TechConnectDB@tconect.database.windows.net" type="feb32156:DbDataSourceImpl" />
-        <item name="TechConnectDB: database" type="bdf80c8a:MssqlImplModel$Database" />
-        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TechConnectDB@tconect.database.windows.net" type="feb32156:DbDataSourceImpl" />
-        <item name="TechConnectDB: database" type="bdf80c8a:MssqlImplModel$Database" />
-        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-        <item name="solution_providers: table" type="a00791b9:MssqlImplModel$Table" />
-      </path>
-    </expand>
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Entity/User.java">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SolutionProviderDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/LoginServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="850">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,71 +71,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ConnectionManager.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DBWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="1955">
+              <caret line="255" selection-start-line="255" selection-end-line="255" />
+              <folding>
+                <element signature="e#368#916#0" />
+                <element signature="e#922#1464#0" />
+                <element signature="e#1470#2588#0" />
+                <element signature="e#2594#3319#0" />
+                <element signature="e#3325#3756#0" />
+                <element signature="e#3762#4124#0" />
+                <element signature="e#4130#4496#0" />
+                <element signature="e#4502#4921#0" />
+                <element signature="e#4927#5261#0" />
+                <element signature="e#5267#5503#0" />
+                <element signature="e#5509#5801#0" />
+                <element signature="e#5807#6094#0" />
+                <element signature="e#6100#6303#0" />
+                <element signature="e#6309#6561#0" />
+                <element signature="e#6567#6816#0" />
+                <element signature="e#6822#6996#0" />
+                <element signature="e#7002#7234#0" />
+                <element signature="e#7240#7468#0" />
+                <element signature="e#7474#7783#0" />
+                <element signature="e#7789#7961#0" />
+                <element signature="e#8085#8253#0" />
+                <element signature="e#8401#8553#0" />
+                <element signature="e#8559#8778#0" />
+                <element signature="e#8784#9099#0" />
+                <element signature="e#9410#9539#0" />
+                <element signature="e#9605#9681#0" />
+                <element signature="e#9865#10026#0" />
+                <element signature="e#9105#9356#0" />
+                <element signature="e#9362#9619#0" />
+                <element signature="e#10381#10532#0" />
+                <element signature="e#9625#9845#0" />
+                <element signature="e#9851#10093#0" />
+                <element signature="e#10953#11090#0" />
+                <element signature="e#10099#10622#0" />
+                <element signature="e#10628#10852#0" />
+                <element signature="e#10858#11161#0" />
+                <element signature="e#11167#11450#0" />
+                <element signature="e#11456#11992#0" />
+                <element signature="e#12235#12547#0" />
+                <element signature="e#12553#12835#0" />
+                <element signature="e#12733#13029#0" />
+                <element signature="e#12841#13142#0" />
+                <element signature="e#13148#13457#0" />
+                <element signature="e#13463#13977#0" />
+                <element signature="e#13983#14394#0" />
+                <element signature="e#14400#14779#0" />
+                <element signature="e#14785#15022#0" />
+                <element signature="e#15028#15197#0" />
+                <element signature="e#15203#15735#0" />
+                <element signature="e#15741#16768#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/web.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/projects.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="163" column="37" lean-forward="true" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/RegisterServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,27 +144,94 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Entity/Project.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state>
+              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
               <folding>
-                <element signature="e#89#90#0" expanded="true" />
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#150#151#0" expanded="true" />
-                <element signature="e#182#183#0" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#480#481#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#updateProject#0;class#ProjectDAO#0" />
+                <element signature="method#setPairing#0;class#ProjectDAO#0" />
+                <element signature="method#getContributors#0;class#ProjectDAO#0" />
+                <element signature="method#getAdminsPairings#0;class#ProjectDAO#0" />
+                <element signature="method#makeProjectBean#0;class#ProjectDAO#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PrivateProjectDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="method#getPrivateProject#0;class#PrivateProjectDAO#0" />
+                <element signature="method#setPrivateProject#0;class#PrivateProjectDAO#0" />
+                <element signature="method#getPrivateProject#0;class#PrivateProjectDAO#0" />
+                <element signature="method#makeBeanQueue#0;class#PrivateProjectDAO#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PublicProjectDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="64" />
+              <folding>
+                <element signature="method#setPublicProject#0;class#PublicProjectDAO#0" />
+                <element signature="method#getPublicProjectFromName#0;class#PublicProjectDAO#0" />
+                <element signature="method#getProjectFromID#0;class#PublicProjectDAO#0" />
+                <element signature="method#getPublicProject#0;class#PublicProjectDAO#0" />
+                <element signature="method#makeBeanQueue#0;class#PublicProjectDAO#0" />
+                <element signature="method#makeBean#0;class#PublicProjectDAO#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/privateProjectBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/publicProjectBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/adminDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#addAdmin#0;class#adminDAO#0" />
+                <element signature="method#adminLogin#0;class#adminDAO#0" />
+                <element signature="method#getAdmin#0;class#adminDAO#0" />
+                <element signature="method#getAdminFromID#0;class#adminDAO#0" />
+                <element signature="method#getAdminFromName#0;class#adminDAO#0" />
               </folding>
             </state>
           </provider>
@@ -197,13 +247,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>update</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -220,7 +270,6 @@
         <option value="$PROJECT_DIR$/webapps/ROOT/about.jsp" />
         <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/AdministrationProjects.jsp" />
         <option value="$PROJECT_DIR$/webapps/ROOT/AdminProjectPage.jsp" />
-        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.java" />
         <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Entity/User.java" />
         <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/testregister.jsp" />
         <option value="$PROJECT_DIR$/webapps/ROOT/testregister.jsp" />
@@ -231,14 +280,31 @@
         <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/ProfileServlet.java" />
         <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/LoginServlet.java" />
         <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/solutionProviderBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/solutionProvidersProjectBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectProviderBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/providerProjectBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/contactBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/publicProjectBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/providerBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectProviderDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/skillBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SolutionProviderDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/mediaBean.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/mediaDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SkillDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ContactDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DBWrapper.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/adminDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PublicProjectDAO.java" />
+        <option value="$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PrivateProjectDAO.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -253,14 +319,10 @@
       <select />
     </treeState>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -283,21 +345,11 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,22 +365,6 @@
             <path>
               <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
               <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="dataSources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
-              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
               <item name="webapps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -351,24 +387,6 @@
               <item name="ROOT" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
-              <item name="webapps" type="462c0819:PsiDirectoryNode" />
-              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="techConnectCBU" type="462c0819:PsiDirectoryNode" />
-              <item name="webapps" type="462c0819:PsiDirectoryNode" />
-              <item name="ROOT" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
@@ -379,42 +397,36 @@
               <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="techConnect" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="techConnectCBU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="LoginServlt&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542169197161" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551218179288" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../a" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.49195403" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
-    <property name="SearchEverywhereHistoryKey" value="LoginServlt&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jatre\Desktop\techConnectCBU\webapps\ROOT\WEB-INF\lib" />
+      <recent name="C:\Users\wiish\Desktop\techConnectCBU\webapps\ROOT\assets\PMLinks" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jatre\Desktop\techConnectCBU\webapps\ROOT" />
       <recent name="C:\Users\jatre\Desktop\techConnectCBU\webapps\ROOT\assets" />
       <recent name="C:\Users\jatre\Desktop\techConnectCBU\webapps\ROOT\WEB-INF" />
-      <recent name="C:\Users\jatre\Desktop\techConnectCBU\webapps\ROOT\WEB-INF\lib" />
-      <recent name="C:\Users\wiish\Desktop\techConnectCBU\webapps\ROOT\assets\PMLinks" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jatre\Desktop\techConnectCBU\webapps\ROOT\WEB-INF\lib" />
       <recent name="C:\Users\wiish\Desktop\techConnectCBU\webapps\ROOT\assets\PMLinks" />
     </key>
@@ -431,81 +443,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
+  <component name="RunManager" selected="Application.test">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="techConnect.test" />
+      <module name="techConnectCBU" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="techConnect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.37" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="9.0">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
@@ -515,12 +493,11 @@
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_techConnectCBU_4" />
         <option name="DEPLOY_TOMCAT_APPS" value="true" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="60030" />
       </RunnerSettings>
@@ -569,16 +546,24 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -604,6 +589,9 @@
       <workItem from="1550222648186" duration="16248000" />
       <workItem from="1550439110610" duration="6322000" />
       <workItem from="1550536940004" duration="1458000" />
+      <workItem from="1550614611837" duration="124000" />
+      <workItem from="1550614755953" duration="209000" />
+      <workItem from="1550615020759" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="adding management page">
       <created>1549920247856</created>
@@ -633,50 +621,50 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51362000" />
+    <option name="totallyTimeSpent" value="97600000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983682" sideWeight="0.49783784" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983682" sideWeight="0.50216216" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.49783784" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19081081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7443243" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
+      <window_info id="Structure" order="1" weight="0.24964234" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.33144477" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32983682" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.34135976" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49783784" weight="0.32983682" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50216216" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49783784" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32983682" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="13" weight="0.32983682" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32972974" />
+      <window_info anchor="right" id="Database" order="6" weight="0.7433155" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login / register servlet" />
@@ -692,348 +680,396 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/ProjectProvider.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/about.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1258">
-          <caret line="27" column="87" lean-forward="false" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/NewUserRegistration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/AdministrationProjects.jsp" />
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/AdminProjectPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="186" column="48" lean-forward="false" selection-start-line="186" selection-start-column="48" selection-end-line="186" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ConnectionManager.class" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml" />
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/Login.class" />
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.class" />
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.class" />
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/LoginServlet.java" />
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.java" />
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.java" />
-    <entry file="file://$PROJECT_DIR$/work/Catalina/localhost/ROOT/org/apache/jsp/index_jsp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/solutionProvider.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15225">
-          <caret line="609" column="107" lean-forward="false" selection-start-line="609" selection-start-column="107" selection-end-line="609" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/testregister.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/commons_io_2_6.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/bin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/catalina_tribes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/lib3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/servlet_api.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/lib2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/lib1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/lib.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/lib/servlet-api.jar/javax/servlet/http/Part.class" />
-    <entry file="file://$PROJECT_DIR$/.idea/apache-tomcat-9.0.13.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="118" column="9" lean-forward="false" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/apache-tomcat-9.0.13.iml" />
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/about.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.additional_contacts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.phone_extra">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.solution_providers">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.solution_providers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.system_admin">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbSrc:///9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/database/TechConnectDB/schema/dbo/table/solution_providers/trigger/exclusive_admin_sprov.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.additional_contacts" />
+    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.phone_extra" />
+    <entry file="das://src:table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.solution_providers" />
+    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.solution_providers" />
+    <entry file="das://table:/9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/TechConnectDB.dbo.system_admin" />
+    <entry file="dbSrc:///9ddbd527/8860c1ba-c47d-47cd-bc18-ca7c06c83d30/database/TechConnectDB/schema/dbo/table/solution_providers/trigger/exclusive_admin_sprov.sql" />
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/managementPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Entity/User.java" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Entity/Project.java" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/RegisterServlet.java" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/ProjectServlet.java" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/ProfileServlet.java" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/LoginServlet.java" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/Login.java" />
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/projects.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="163" column="37" lean-forward="true" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Entity/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="e#89#90#0" expanded="true" />
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/RegisterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/ProjectServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/ProfileServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/Servlets/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ConnectionManager.java">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
+        <state>
+          <caret selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/projects.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/techConnectCBU.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/test.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="996" column="10" selection-start-line="996" selection-start-column="10" selection-end-line="996" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/bean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SolutionProviderServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/contactBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/providerBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectProviderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="40" column="80" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setProjectProvider#0;class#ProjectProviderDAO#0" />
+            <element signature="method#projectProviderLogin#0;class#ProjectProviderDAO#0" />
+            <element signature="method#getProjectProvider#0;class#ProjectProviderDAO#0" />
+            <element signature="method#getProjectProviderFromID#0;class#ProjectProviderDAO#0" />
+            <element signature="method#getProjectProviderFromName#0;class#ProjectProviderDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectProviderBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/skillBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/mediaBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/mediaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SkillDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setSkill#0;class#SkillDAO#0" />
+            <element signature="method#getSkills#0;class#SkillDAO#0" />
+            <element signature="method#setUserSkill#0;class#SkillDAO#0" />
+            <element signature="method#getUserSkills#0;class#SkillDAO#0" />
+            <element signature="method#makeSkillBeanQueue#0;class#SkillDAO#0" />
+            <element signature="method#makeSkillBean#0;class#SkillDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ContactDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setDoubleProvider#0;class#UserDAO#0" />
+            <element signature="method#doubleProviderLogin#0;class#UserDAO#0" />
+            <element signature="method#updateUser#0;class#UserDAO#0" />
+            <element signature="method#makeBeanQueue#0;class#UserDAO#0" />
+            <element signature="method#makeBean#0;class#UserDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/SolutionProviderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/adminDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addAdmin#0;class#adminDAO#0" />
+            <element signature="method#adminLogin#0;class#adminDAO#0" />
+            <element signature="method#getAdmin#0;class#adminDAO#0" />
+            <element signature="method#getAdminFromID#0;class#adminDAO#0" />
+            <element signature="method#getAdminFromName#0;class#adminDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/publicProjectBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/projectBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PublicProjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="64" />
+          <folding>
+            <element signature="method#setPublicProject#0;class#PublicProjectDAO#0" />
+            <element signature="method#getPublicProjectFromName#0;class#PublicProjectDAO#0" />
+            <element signature="method#getProjectFromID#0;class#PublicProjectDAO#0" />
+            <element signature="method#getPublicProject#0;class#PublicProjectDAO#0" />
+            <element signature="method#makeBeanQueue#0;class#PublicProjectDAO#0" />
+            <element signature="method#makeBean#0;class#PublicProjectDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/privateProjectBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DBWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="255" selection-start-line="255" selection-end-line="255" />
+          <folding>
+            <element signature="e#368#916#0" />
+            <element signature="e#922#1464#0" />
+            <element signature="e#1470#2588#0" />
+            <element signature="e#2594#3319#0" />
+            <element signature="e#3325#3756#0" />
+            <element signature="e#3762#4124#0" />
+            <element signature="e#4130#4496#0" />
+            <element signature="e#4502#4921#0" />
+            <element signature="e#4927#5261#0" />
+            <element signature="e#5267#5503#0" />
+            <element signature="e#5509#5801#0" />
+            <element signature="e#5807#6094#0" />
+            <element signature="e#6100#6303#0" />
+            <element signature="e#6309#6561#0" />
+            <element signature="e#6567#6816#0" />
+            <element signature="e#6822#6996#0" />
+            <element signature="e#7002#7234#0" />
+            <element signature="e#7240#7468#0" />
+            <element signature="e#7474#7783#0" />
+            <element signature="e#7789#7961#0" />
+            <element signature="e#8085#8253#0" />
+            <element signature="e#8401#8553#0" />
+            <element signature="e#8559#8778#0" />
+            <element signature="e#8784#9099#0" />
+            <element signature="e#9410#9539#0" />
+            <element signature="e#9605#9681#0" />
+            <element signature="e#9865#10026#0" />
+            <element signature="e#9105#9356#0" />
+            <element signature="e#9362#9619#0" />
+            <element signature="e#10381#10532#0" />
+            <element signature="e#9625#9845#0" />
+            <element signature="e#9851#10093#0" />
+            <element signature="e#10953#11090#0" />
+            <element signature="e#10099#10622#0" />
+            <element signature="e#10628#10852#0" />
+            <element signature="e#10858#11161#0" />
+            <element signature="e#11167#11450#0" />
+            <element signature="e#11456#11992#0" />
+            <element signature="e#12235#12547#0" />
+            <element signature="e#12553#12835#0" />
+            <element signature="e#12733#13029#0" />
+            <element signature="e#12841#13142#0" />
+            <element signature="e#13148#13457#0" />
+            <element signature="e#13463#13977#0" />
+            <element signature="e#13983#14394#0" />
+            <element signature="e#14400#14779#0" />
+            <element signature="e#14785#15022#0" />
+            <element signature="e#15028#15197#0" />
+            <element signature="e#15203#15735#0" />
+            <element signature="e#15741#16768#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/ProjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#updateProject#0;class#ProjectDAO#0" />
+            <element signature="method#setPairing#0;class#ProjectDAO#0" />
+            <element signature="method#getContributors#0;class#ProjectDAO#0" />
+            <element signature="method#getAdminsPairings#0;class#ProjectDAO#0" />
+            <element signature="method#makeProjectBean#0;class#ProjectDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapps/ROOT/WEB-INF/classes/techConnect/PrivateProjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="method#getPrivateProject#0;class#PrivateProjectDAO#0" />
+            <element signature="method#setPrivateProject#0;class#PrivateProjectDAO#0" />
+            <element signature="method#getPrivateProject#0;class#PrivateProjectDAO#0" />
+            <element signature="method#makeBeanQueue#0;class#PrivateProjectDAO#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,7 +1091,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1078,7 +1114,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>9.0</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1090,7 +1126,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Web6|13|0|apache-tomcat-9</last-edited>
+          <last-edited>techConnectCBU</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1102,7 +1138,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8 (1)</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
