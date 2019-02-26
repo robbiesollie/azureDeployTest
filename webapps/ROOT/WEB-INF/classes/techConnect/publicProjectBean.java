@@ -1,5 +1,6 @@
 package techConnect;
 
+//bean containing data for public projects
 public class publicProjectBean {
     private Integer projectID;
     private Integer providerID;

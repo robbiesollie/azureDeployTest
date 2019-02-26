@@ -27,72 +27,20 @@ public class DBWrapper{
     }
 
     private ResultSet sendQuery(String query) {
-        try {
-            System.out.println(url);
-            connection = DriverManager.getConnection(url);
-            System.out.println("=========================================");
-            String schema = connection.getSchema();
-            System.out.println("Successful connection - Schema: " + schema);
-
-            System.out.println("Query data example:");
-            System.out.println("=========================================");
-
-            // Create and execute a SELECT SQL statement.
-            String selectSql = query;
-
-            try (Statement statement = connection.createStatement();
-                 ResultSet resultSet = statement.executeQuery(selectSql)) {
-
-                // Print results from select statement
-                //System.out.println("Top 20 categories:");
-                while (resultSet.next())
-                {
-                    System.out.println(resultSet.getString(1) + " " + resultSet.getString(2));
-                }
-                connection.close();
-                //return resultSet;
+        if(verifyQuery(query)) {
+            try {
+                connection = DriverManager.getConnection(url);
+                String schema = connection.getSchema();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(query);
+                resultSet.next();
+                return resultSet;
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        }
-        catch (Exception e) {
-            System.out.println("kkk");
-            e.printStackTrace();
         }
         return null;
     }
-
-    public void testQ (String q) {
-        sendQuery(q);
-    }
-    /*public DBWrapper() {
-        try {
-            String connectionUrl = "tconect.database.windows.net";
-            Connection con = null;
-            Statement stmt = null;
-            //ResultSet rs = null;
-            Class.forName("tconect.database.windows.net");
-            con = DriverManager.getConnection(connectionUrl);
-            //String SQL = "select smth from tableName where smth";
-            stmt = con.createStatement();
-            //rs = stmt.executeQuery(query);
-            //return rs;
-        } catch (Exception e) {
-            throw new IllegalArgumentException(e);
-            //return null;
-        }
-    }
-
-    //Code based on (https://stackoverflow.com/questions/19514881/java-how-retrieve-data-from-database)
-    //Submits given query and returns the result set
-    private ResultSet sendQuery(String query) {
-        //Submit query
-        if(verrifyQuery(query)) {
-            ResultSet rs = null;
-            rs = stmt.executeQuery(query);
-            return rs;
-        }
-        throw new IllegalArgumentException("Dangerous Query detected");
-        //return null;
-    }*/
 
     //Creates a problem provider if userType = 'P', a solution provider if 'S', or both if 'B'
     public void addUser(char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate) throws java.sql.SQLException {
@@ -113,6 +61,16 @@ public class DBWrapper{
             }
             rs.close();
         }
+    }
+
+    //updates the user
+    public void updateUser(String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate, String oldName, String oldPass) throws java.sql.SQLException {
+        int gBit = 0;
+        int pBit = 0;
+        if(group) {gBit = 1;}
+        if(isPrivate) {pBit = 1;}
+        String query = "UPDATE users SET userName = '" + name + "', pass = HASHBYTES('SHA2_512', salt + '" + password + "'), email = '" + email + "', affiliationN = '" + affiliation + "', location = '" + location + "', inGroup = " + gBit + ", active = " + pBit + " WHERE userName = '" + oldName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + oldPass + "');";
+        sendQuery(query);
     }
 
     //creates an admin
@@ -212,22 +170,25 @@ public class DBWrapper{
         String query = "Select * FROM additional_contacts WHERE userID = " + userID + ";";
         return sendQuery(query);
     }
-    /*
-    //Used to add phone contacts
-    public void addContact() {
 
+    public void updateContact(int ID, String type, String address) {
+        String query = "Update additional_contacts SET contact_type = '" + type + "', contact_address = '" + address + "' WHERE contactID = " + ID + ";";
+        sendQuery(query);
     }
 
+    public void deleteContact(int ID) {
+        String query = "DELETE FROM additional_contacts WHERE contactID = " + ID + ";";
+        sendQuery(query);
+    }
+
+    /*
     private void addPhone() {}
     */
 
     //Creates query to add a skill
     public void addSkill(String skillName) {
-        if(skillName.length() <= 90) {
-            String newSkillQuery = "INSERT INTO skills VALUES ('" + skillName + "');";
-        }else {
-            throw new IllegalArgumentException("Skill's name is too long.");
-        }
+        String newSkillQuery = "INSERT INTO skills VALUES ('" + skillName + "');";
+        sendQuery(newSkillQuery);
     }
 
     //Gets all skills saved in DB.
@@ -248,6 +209,26 @@ public class DBWrapper{
         return sendQuery(query);
     }
 
+    //changes skill name
+    public void updateSkills(int ID, String skillName) {
+        String query = "UPDATE skills SET skill_name = '" + skillName + "' WHERE skillID = " + ID + ";";
+        sendQuery(query);
+    }
+
+    //deletes skill and every use of it
+    public void deleteSkills(int ID) {
+        String query = "DELETE FROM solution_providers_skills WHERE skillID = " + ID + ";";
+        sendQuery(query);
+        query = "DELETE FROM skills WHERE skillID = " + ID + ";";
+        sendQuery(query);
+    }
+
+    //deletes a relationship between skill and user
+    public void deleteUserSkill(int userID, int skillID) {
+        String query = "DELETE FROM solution_providers_skills WHERE skillID = " + skillID + " AND sproviderID = " + userID + ";";
+        sendQuery(query);
+    }
+
     //Creates query to add a media file for a project
     public void addProjectMedia(int projectID, String address) {
         String query = "INSERT INTO project_media_files VALUES (" + projectID + ", '" + address + "');";
@@ -260,26 +241,38 @@ public class DBWrapper{
         return sendQuery(query);
     }
 
+    public void deleteProjectMedia(int ID) {
+        String query = "DELETE FROM project_media_files WHERE fileID = " + ID + ";";
+        sendQuery(query);
+    }
+
     //Adds a media file for a user
-    public void addUserMedia(int projectID, Boolean profile, String address) {
-        String query = "INSERT INTO user_media_files VALUES (" + projectID + ", '" + address + "');";
+    public void addUserMedia(int userID, String address) {
+        String query = "INSERT INTO user_media_files VALUES (" + userID + ", '" + address + "');";
         sendQuery(query);
     }
 
     //Returns all media file addresses assosiated with a given user.
-    public ResultSet getUserMedia(int projectID) {
-        String query = "Select * FROM user_media_files WHERE projectID = " + projectID + ";";
+    public ResultSet getUserMedia(int userID) {
+        String query = "Select * FROM user_media_files WHERE projectID = " + userID + ";";
         return sendQuery(query);
+    }
+
+    public void deleteUserMedia(int ID) {
+        String query = "DELETE FROM user_media_files WHERE fileID = " + ID + ";";
+        sendQuery(query);
     }
 
     //Creates query to add a public project
     public void addPublicProject(int providerID, String pName, String proposal) throws java.sql.SQLException {
         //code
-        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0;";
+        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
         ResultSet rs = sendQuery(query);
+        //rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO public_project VALUES (" + ID + ");";
         sendQuery(query);
+        rs.close();
     }
 
     //Gets all public projects
@@ -303,8 +296,9 @@ public class DBWrapper{
     //Creates query to add a private project
     public void addPrivateProject(int providerID, int adminID, String pName, String proposal) throws java.sql.SQLException {
         //code
-        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0);";
+        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
         ResultSet rs = sendQuery(query);
+        //rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO private_project VALUES (" + ID + ", " + adminID + ");";
         sendQuery(query);
@@ -328,6 +322,13 @@ public class DBWrapper{
         return sendQuery(query);
     }
 
+    public void updateProjects(int projectID, String name, String proposal, Boolean complete) {
+        int cBit = 0;
+        if(complete) {cBit = 1;}
+        String query = "UPDATE project SET projectName = '" + name + "', proposal = '" + proposal + "', complete = " + cBit + " WHERE projectID = " + projectID + ";";
+        sendQuery(query);
+    }
+
     //gets all private projects overseen by a given admin
     public ResultSet getAdminsPrivateProjects(int adminID) {
         String query = "Select * FROM project, private_project WHERE project.projectID = private_project.projectID AND AdminID = " + adminID + ";";
@@ -342,13 +343,13 @@ public class DBWrapper{
 
     //Returns the ID and user name of all users assigned to a certain project
     public ResultSet getProjectContributors(int projectID) {
-        String query = "SELECT userID, userName, project_solution_providers.active FROM project_solution_providers, solution_providers, users WHERE solution_providers.sproviderID = project_solution_providers.sproviderID AND users.userID = solution_providers.sproviderID AND projectID = " + projectID + ";";
+        String query = "SELECT solution_providers.sproviderID, projectID, project_solution_providers.active, adminID FROM project_solution_providers, solution_providers, users WHERE solution_providers.sproviderID = project_solution_providers.sproviderID AND users.userID = solution_providers.sproviderID AND projectID = " + projectID + ";";
         return sendQuery(query);
     }
 
     //Returns all projects worked on by a user.
     public ResultSet getSolutionProvidersProjects(int userID) {
-        String query = "SELECT project.projectID, projectName, proposal, active FROM project, project_solution_providers WHERE project.projectID = project_solution_providers.projectID AND sproviderID = " + userID + ";";
+        String query = "SELECT project.projectID, pproviderID, sproviderID, adminID, projectName, proposal, complete, active FROM project, project_solution_providers WHERE project.projectID = project_solution_providers.projectID AND sproviderID = " + userID + ";";
         return sendQuery(query);
     }
 
@@ -358,7 +359,7 @@ public class DBWrapper{
     }
 
     //Checks if query contains comments or is null
-    private Boolean verrifyQuery(String Query) {
+    private Boolean verifyQuery(String Query) {
         if(Query.contains("/*") || Query.contains("*/") || Query.contains("--") || Query == null) { return false; }
         return true;
     }
