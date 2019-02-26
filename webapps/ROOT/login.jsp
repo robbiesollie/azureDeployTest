@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.jsp">Home <span class="sr-only"></a>
+                    <a class="nav-link" href="index.jsp">Home <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="projects.jsp">Projects</a>
@@ -40,16 +40,16 @@
     </nav>
 </section>
 <section id="login-forms">
-    <p>Login</p>
+    <h2><center>Login</center></h2>
     <form action="LoginServlet" method="post">
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Passwod">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

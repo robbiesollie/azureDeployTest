@@ -1,13 +1,12 @@
 package techConnect;
 
-import org.w3c.dom.UserDataHandler;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * TODO: Test interaction with JSP
@@ -23,6 +22,10 @@ public class RegistrationServlet extends HttpServlet {
             user.setLastName(req.getParameter("last-name"));
             user.setUserName(req.getParameter("userName"));
             user.setEmail(req.getParameter("email"));
+            System.out.println(user.getFirstName());
+            System.out.println(user.getLastName());
+            System.out.println(user.getUsername());
+            System.out.println(user.getEmail());
             if (!UserDAO.getUsername(user.getUsername())) {
 
                 UserDAO.registration(user);
@@ -34,6 +37,7 @@ public class RegistrationServlet extends HttpServlet {
         }
         catch (Throwable e) {
             System.out.println(e);
+            System.out.println(Arrays.toString(e.getStackTrace()));
         }
     }
 

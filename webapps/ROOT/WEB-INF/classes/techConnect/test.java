@@ -30,4 +30,6 @@ public class test{
         DBWrapper d = new DBWrapper();
         d.testQ("SELECT * FROM users;");*/
     }
+
+
 }

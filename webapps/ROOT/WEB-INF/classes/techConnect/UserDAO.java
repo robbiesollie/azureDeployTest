@@ -2,6 +2,7 @@ package techConnect;
 
 
 import java.sql.*;
+import java.util.Arrays;
 
 public class UserDAO
 {
@@ -15,18 +16,21 @@ public class UserDAO
         //preparing some objects for connection
         Statement stmt = null;
 
-        String username = bean.getUsername();
+        String email = bean.getEmail();
         String password = bean.getPassword();
 
+//        String searchQuery =
+//                "select * from users where email='"
+//                        + email
+//                        + "' AND password='"
+//                        + password
+//                        + "'";
         String searchQuery =
-                "select * from users where username='"
-                        + username
-                        + "' AND password='"
-                        + password
-                        + "'";
+                "select * from users where password=" + password;
+
 
         //Prints out username/password if found, null if not
-        System.out.println("Your user name is " + username);
+        System.out.println("Your email is " + email);
         System.out.println("Your password is " + password);
         System.out.println("Query: "+searchQuery);
 
@@ -61,6 +65,7 @@ public class UserDAO
         catch (Exception ex)
         {
             System.out.println("Log In failed: An Exception has occurred! " + ex);
+            System.out.println(Arrays.toString(ex.getStackTrace()));
         }
 
         //some exception handling
@@ -95,17 +100,25 @@ public class UserDAO
     }
 
     public static void registration(UserBean bean) {
-        String insertionQuery = "INSERT INTO users (user_name, pass, email) VALUES (?, ?, ?)";
+        String insertionQuery = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
         try {
+//            currentCon = ConnectionManager.getConnection();
+//            PreparedStatement insertStmt = currentCon.prepareStatement(insertionQuery);
+//            insertStmt.setString(1, bean.getUsername());
+//            insertStmt.setString(2, bean.getPassword());
+//            insertStmt.setString(3, bean.getEmail());
+//            System.out.println(insertionQuery);
+//            insertStmt.executeUpdate();
+
             currentCon = ConnectionManager.getConnection();
-            PreparedStatement insertStmt = currentCon.prepareStatement(insertionQuery);
-            insertStmt.setString(1, bean.getUsername());
-            insertStmt.setString(2, bean.getPassword());
-            insertStmt.setString(3, bean.getEmail());
-            insertStmt.executeUpdate();
+            Statement stmt = currentCon.createStatement();
+            stmt.executeQuery("insert into users (user_name, email, pass, salt) values ('nugent','nugent@nuggets.com','sweetandsoursauce','lots')");
+
         }
         catch (SQLException e) {
-            System.out.println("failed to register" + e.getMessage());
+            System.out.println("failed to register: " + e.getMessage());
+            System.out.println(e.getSQLState());
+            System.out.println(Arrays.toString(e.getStackTrace()));
         }
     }
 
@@ -115,6 +128,7 @@ public class UserDAO
         ResultSet results;
         try {
             currentCon = ConnectionManager.getConnection();
+            System.out.println(currentCon);
             PreparedStatement getStmt = currentCon.prepareStatement(searchQuery);
             getStmt.setString(1, username);
             results = getStmt.executeQuery();

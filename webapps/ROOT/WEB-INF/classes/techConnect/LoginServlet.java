@@ -13,15 +13,16 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
 
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, java.io.IOException {
 
         try
         {
 
             techConnect.UserBean user = new UserBean();
-            user.setUserName(request.getParameter("emailName"));
-            user.setPassword(request.getParameter("emailPassword"));
+            user.setEmail(request.getParameter("email"));
+            user.setPassword(request.getParameter("password"));
+            System.out.println(request.getParameter("email"));
 
             user = UserDAO.login(user);
 
@@ -30,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 
                 HttpSession session = request.getSession(true);
                 session.setAttribute("currentSessionUser",user);
-                response.sendRedirect(""); //after login
+                response.sendRedirect("index.jsp"); //after login
             }
 
             else

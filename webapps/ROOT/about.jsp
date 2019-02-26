@@ -112,7 +112,7 @@
 
     <div class="container-fluid">
         <div class="container-fluid home-main">
-            <h2><center><img src="assets/techConnectLogo.JPG" class="img" alt="logo" width="1303" height="619"></center><span
+            <h2><center><img src="assets/techConnectLogo.JPG" class="img" alt="logo" width="1200" height="600"></center><span
                     class="blinker">.</span></h2>
         </div>
         <div class="container-fluid home-content1">
