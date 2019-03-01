@@ -15,10 +15,10 @@ public class UserDAO extends DAO {
         }
     }
 
-    //login for users who provide solutions and problems
-    public providerBean doubleProviderLogin(providerBean bean) throws java.sql.SQLException {
+    //Returns all needed user data when given an appropriate username and password
+    public providerBean login(providerBean bean) throws java.sql.SQLException {
         if(bean.getUserName() != null && bean.getPassword() != null) {
-            ResultSet rs = DB.doubleProviderLogin(bean.getUserName(), bean.getPassword());
+            ResultSet rs = DB.login(bean.getUserName(), bean.getPassword());
             return makeBean(rs);
         }
         return null;

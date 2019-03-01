@@ -12,17 +12,6 @@ public class adminDAO extends UserDAO {
         }
     }
 
-    //Returns admin data when given correct name and password
-    public providerBean adminLogin(providerBean bean) throws java.sql.SQLException {
-        if(bean.getUserName() != null && bean.getPassword() != null) {
-            ResultSet rs = DB.adminLogin(bean.getUserName(), bean.getPassword());
-            bean = makeBean(rs);
-            rs.close();
-            return bean;
-        }
-        return null;
-    }
-
     //Returns all admins
     public Queue<providerBean> getAdmin() throws java.sql.SQLException {
         ResultSet rs = DB.getAdmins();

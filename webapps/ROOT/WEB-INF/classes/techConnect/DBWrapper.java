@@ -63,6 +63,12 @@ public class DBWrapper{
         }
     }
 
+    //
+    public ResultSet login(String userName, String passWord) {
+        String query = "SELECT * FROM users WHERE userIDAND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
+        return sendQuery(query);
+    }
+
     //updates the user
     public void updateUser(String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate, String oldName, String oldPass) throws java.sql.SQLException {
         int gBit = 0;
@@ -80,30 +86,6 @@ public class DBWrapper{
         int ID = rs.getInt(1);
         query = "INSERT INTO system_admin VALUES (" + ID + ");";
         sendQuery(query);
-    }
-
-    //Returns data of problem provider with correct login input
-    public ResultSet problemProviderLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, problem_provider WHERE userID = pproviderID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
-    }
-
-    //Returns data of solution provider with correct login input
-    public ResultSet solutionProviderLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, solution_providers WHERE userID = sproviderID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
-    }
-
-    //Returns data of problem and solution provider with correct login input
-    public ResultSet doubleProviderLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, solution_providers, problem_provider WHERE userID = sproviderID AND userID = pproviderID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
-    }
-
-    //Returns data of admins with correct login input
-    public ResultSet adminLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, system_admin WHERE userID = adminID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
     }
 
     //Returns all solution providers

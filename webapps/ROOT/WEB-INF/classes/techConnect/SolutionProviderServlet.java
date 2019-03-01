@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/VolunteerProfileServlet")
 
 public class SolutionProviderServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    /*public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, java.io.IOException {
         try {
             HttpSession session = request.getSession(true);
@@ -33,5 +33,5 @@ public class SolutionProviderServlet extends HttpServlet {
         catch (Throwable e) {
             System.out.println(e);
         }
-    }
+    }*/
 }

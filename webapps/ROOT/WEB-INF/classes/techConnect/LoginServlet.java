@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 public class LoginServlet extends HttpServlet {
 
-
+    /*
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, java.io.IOException {
 
@@ -44,4 +44,5 @@ public class LoginServlet extends HttpServlet {
             System.out.println(theException);
         }
     }
+    */
 }
