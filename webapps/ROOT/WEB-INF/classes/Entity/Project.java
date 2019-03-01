@@ -45,6 +45,4 @@ public class Project {
         this.proposal = proposal;
         this.projectProvider = projectProvider;
     }
-
-
 }

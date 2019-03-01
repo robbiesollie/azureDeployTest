@@ -14,7 +14,7 @@ public class ConnectionManager {
 
         // Connect to database
         String hostName = "tconect.database.windows.net";
-        String dbName = "tcdbtest";
+        String dbName = "TechConnectDB";
         String user = "cbuStudents";
         String password = "Angel1996";
         String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;"
