@@ -1,18 +1,49 @@
 package techConnect;
 
+import DummyProjects.ProjectDummyBean;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 public class ProjectDummy {
-    String title,date,contact, need, request, who, language, extra;
 
     public ProjectDummy project(){
         return new ProjectDummy();
     }
 
+    public List<ProjectDummyBean> getProjects() {
+        List<ProjectDummyBean> beanQueuen = new LinkedList<>();
+        for (int i = 0; i < 7; i++) {
+            ProjectDummyBean bean = new ProjectDummyBean();
+            bean.setPicture(getPic().get(i));
+            bean.setTitle(getTitle().get(i));
+            bean.setDate(getDate().get(i));
+            bean.setContact(getContact().get(i));
+            bean.setNeed(getNeed().get(i));
+            bean.setRequest(getRequest().get(i));
+            bean.setWho(getWhoNeed().get(i));
+            bean.setLanguage(getLanguageNeed().get(i));
+            bean.setExtra(getExtra().get(i));
+            beanQueuen.add(bean);
+        }
 
-    public List<String> setProjectTitle() {
+        return beanQueuen;
+    }
+
+    private List<String> getPic() {
+        List<String> imageLinks = new LinkedList<>();
+        imageLinks.add("\"assets/TechConnectCats/linktocat.png\"");
+        imageLinks.add("\"assets/TechConnectCats/bear-cavalry.png\"");
+        imageLinks.add("\"assets/TechConnectCats/bouncercat.png\"");
+        imageLinks.add("\"assets/TechConnectCats/dojocat.jpg\"");
+        imageLinks.add("\"assets/TechConnectCats/femalecodertocat.png\"");
+        imageLinks.add("\"assets/TechConnectCats/foundingfather_v2.png\"");
+        imageLinks.add("\"assets/TechConnectCats/riddlocat.png\"");
+        return imageLinks;
+    }
+
+    private List<String> getTitle() {
         List<String> titleList = new LinkedList<>();
         titleList.add("America's T4T App");
         titleList.add("Work among the Naxi");
@@ -25,7 +56,7 @@ public class ProjectDummy {
         return titleList;
     }
 
-    public List<String> setProjectDate(){
+    private List<String> getDate(){
         List<String> dateList = new LinkedList<>();
         dateList.add("October 16, 2014");
         dateList.add("January 28, 2015");
@@ -36,7 +67,7 @@ public class ProjectDummy {
         dateList.add("April 28, 2015");
         return dateList;
     }
-    public List<String> setContact(){
+    private List<String> getContact(){
         List<String> contactList = new LinkedList<>();
         contactList.add("Kevin Baggett\n" +
                 "kevintbaggett@gmail.com");
@@ -47,13 +78,14 @@ public class ProjectDummy {
         contactList.add("Name: Will Ellis\n" +
                 "Email Address: wse815775@eurasianetworks.com");
         contactList.add("Larry and Jeremy");
+        contactList.add("N/A");
         contactList.add("John Randall\n" +
                 "JCR929215@AsiaNetRising.com\n" +
                 "www.southerncrossproject.org\n" +
                 "Facebook Southern Cross Project\n");
         return contactList;
     }
-    public List<String> setNeed() {
+    private List<String> getNeed() {
         List<String> needList = new LinkedList<>();
         needList.add("pastoral application and form");
         needList.add("Creating a cross platform app which can be downloaded on pretty much any phone in China");
@@ -65,7 +97,7 @@ public class ProjectDummy {
         return needList;
     }
 
-    public List<String> setRequest(){
+    private List<String> getRequest(){
         List<String> whyList = new LinkedList<>();
         whyList.add("It would be primarily aimed at the leader.  The app would open with the 3/3rds idea.  " +
                 "I'm imagining three columns on the screen that the leader can touch.1st 1/3 - All the questions" +
@@ -235,7 +267,7 @@ public class ProjectDummy {
         return whyList;
     }
 
-    public List<String> setWhoNeed(){
+    private List<String> getWhoNeed(){
         List<String> whoList = new LinkedList<>();
         whoList.add("Pastors");
         whoList.add("We will encourage all of the Naxi brothers and sisters in town to begin using this app and then it " +
@@ -256,7 +288,7 @@ public class ProjectDummy {
         return whoList;
     }
 
-    public List<String> setLanguageNeed(){
+    private List<String> getLanguageNeed(){
         List <String> languageList = new LinkedList<>();
         languageList.add("N/A");
         languageList.add("The Naxi language of Southeast Asia.");
@@ -277,7 +309,7 @@ public class ProjectDummy {
         return languageList;
     }
 
-    public List<String> setExtra(){
+    private List<String> getExtra(){
         List<String> extraList = new LinkedList<>();
         extraList.add("N/A");
         extraList.add("The greatest challenge to fulfilling this request is the time associated with setting it up, " +
