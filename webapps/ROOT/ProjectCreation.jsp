@@ -62,12 +62,12 @@
             <input type="text" class="form-control" id="ProjectName" placeholder="Enter Project Name">
         </div>
         <div class="form-group">
-            <label for="need">What do you need? </label>
-            <textarea id = "need" rows="6" cols="78" placeholder="Describe the project">Please type the need here.</textarea>
+            <label for = "ProjectProvider"> Contact: </label>
+            <input type="text" class="form-control" id="ProjectProvider" placeholder="Enter Primary Contact">
         </div>
         <div class="form-group">
-            <label for="why">Why should your request be at the top of the list? </label>
-            <textarea id = "why" rows="6" cols="78" placeholder="Describe the project">Please place the reason here.</textarea>
+            <label for="need">What do you need? </label>
+            <textarea id = "need" rows="6" cols="78" placeholder="Describe the project">Please type a short description of what the need is.</textarea>
         </div>
         <div class="form-group">
             <label for="who">Who is going to use it and how? </label>
@@ -77,6 +77,10 @@
             <label for="language">What languages do they speak? </label>
             <textarea id = "language" rows="6" cols="78" placeholder="Describe the project">Please place languages here.</textarea>
         </div>
+        <div class="form-group">
+            <label for="extra">Anything else? </label>
+            <textarea id = "extra" rows="6" cols="78" placeholder="Describe the project">Please place anything else you would like to note.</textarea>
+        </div>
     </form>
     <form action="Profile.jsp">
         <button id="done" class="btn btn-primary" value="next">Done!</button>
@@ -84,3 +88,4 @@
 </section>
 </body>
 </html>
+

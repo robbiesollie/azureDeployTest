@@ -1,5 +1,6 @@
-<%@ page import="java.util.Date" %><%-- Created by IntelliJ IDEA. --%>
-<%@ page import="techConnect.Login" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="techConnect.ProjectDummy" %>
+<%@ page import="techConnect.ProfileDummy" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -54,6 +55,10 @@
                 <h2>List of Private Projects</h2>
             </div>
         </div>
+        <%
+            ProjectDummy projectDummy = new ProjectDummy();
+            ProfileDummy profileDummy = new ProfileDummy();
+        %>
         <div class="row">
             <div class="col-md-12">
                 <div class="row mb-2">
@@ -62,14 +67,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/product14-600x600.jpg" width=100%>
+                                        <img src=<%=profileDummy.setProfilePic().get(4)%> width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2>A crowd walks on a New York street </h2></a>
-                                                <p>Hub because the aformentioned trio already offers its customers
-                                                    protections when dealing with the virtual currency.</p>
+                                                <a href="#"><h2><%=projectDummy.setProjectTitle().get(0)%> </h2></a>
+                                                <p><%=projectDummy.setNeed()%></p>
 
                                             </div>
                                             <div class="news-footer">
@@ -77,15 +81,15 @@
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Prashant Singh
+                                                            <%=projectDummy.setContact().get(0)%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Unassigned
+                                                            <%=profileDummy.setName().get(3)%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            posted
+                                                            <%= projectDummy.setProjectDate().get(0) %>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -103,14 +107,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/product14-600x600.jpg"width=100%>
+                                        <img src=<%=profileDummy.setProfilePic().get(2)%>width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2>A crowd walks on a New York street </h2></a>
-                                                <p>Hub because the aformentioned trio already offers its customers
-                                                    protections when dealing with the virtual currency.</p>
+                                                <a href="#"><h2><%=projectDummy.setProjectTitle().get(1)%> </h2></a>
+                                                <p><%=projectDummy.setNeed().get(1)%></p>
 
                                             </div>
                                             <div class="news-footer">
@@ -118,15 +121,15 @@
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Prashant Singh
+                                                            <%=projectDummy.setContact().get(1)%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            assigned
+                                                            <%=profileDummy.setName().get(2)%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            posted
+                                                            <%=projectDummy.setProjectDate().get(1)%>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -144,14 +147,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/product14-600x600.jpg"width=100%>
+                                        <img src=<%=profileDummy.setProfilePic().get(6)%>width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2>A crowd walks on a New York street </h2></a>
-                                                <p>Hub because the aformentioned trio already offers its customers
-                                                    protections when dealing with the virtual currency.</p>
+                                                <a href="#"><h2><%=projectDummy.setProjectTitle().get(2)%></h2></a>
+                                                <p><%=projectDummy.setNeed().get(2)%></p>
 
                                             </div>
                                             <div class="news-footer">
@@ -159,15 +161,15 @@
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Prashant Singh
+                                                            <%=projectDummy.setContact().get(2)%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            Assigned
+                                                            <%=profileDummy.setName().get(6)%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            posted
+                                                            <%=projectDummy.setProjectDate().get(2)%>
                                                         </li>
                                                     </ul>
                                                 </div>
