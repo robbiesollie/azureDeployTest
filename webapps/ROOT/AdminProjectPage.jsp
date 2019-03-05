@@ -76,7 +76,7 @@
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2><%=projectBean.get(0).getTitle()%> </h2></a>
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(0).getTitle()%> </h2></a>
                                                 <p><%=projectBean.get(0).getNeed()%></p>
 
                                             </div>
@@ -116,7 +116,7 @@
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2><%=projectBean.get(1).getTitle()%> </h2></a>
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(1).getTitle()%> </h2></a>
                                                 <p><%=projectBean.get(1).getNeed()%></p>
 
                                             </div>
@@ -156,9 +156,8 @@
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2><%=projectBean.get(2).getTitle()%></h2></a>
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(2).getTitle()%></h2></a>
                                                 <p><%=projectBean.get(2).getNeed()%></p>
-
                                             </div>
                                             <div class="news-footer">
                                                 <div class="news-author">
@@ -188,11 +187,11 @@
                 <div class="row mb-2">
                     <div class="col-md-12">
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">1</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">2</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">3</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">Next</a></li>
                         </ul>
                     </div>
                 </div>

@@ -722,19 +722,15 @@
                         List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
                     %>
                     <h4>Projects worked on: </h4>
+                    <h4>Projects worked on: </h4>
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#"> <%=beanQueuen.get(0).getTitle()%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=beanQueuen.get(1).getTitle()%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=beanQueuen.get(2).getTitle()%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=beanQueuen.get(3).getTitle()%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=beanQueuen.get(4).getTitle()%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=beanQueuen.get(5).getTitle()%></a></li>\
+                        <%for(int i = 0; i < 6; i++){%>
+                        <li class="list-group-item"><a href="ProjectDisplay.jsp"> <%=beanQueuen.get(i).getTitle()%></a></li>
+                        <%}%>
                     </ul>
                 </div>
             </div>
         </div>
-        <!-- resume -->
-
     </div>
     </div>
 </section>
