@@ -1,6 +1,9 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="techConnect.ProjectDummy" %>
-<%@ page import="techConnect.ProfileDummy" %><%-- Created by IntelliJ IDEA. --%>
+<%@ page import="techConnect.ProfileDummy" %>
+<%@ page import="DummyProjects.ProjectDummyBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="DummyProjects.ProfileDummyBean" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -534,6 +537,8 @@
 </section>
 <%
     ProfileDummy profileDummy = new ProfileDummy();
+    List<ProfileDummyBean> profileBean = profileDummy.getProfiles();
+
 %>
 <section>
     <div class="container">
@@ -546,19 +551,19 @@
                             <div class="col-lg-12">
                                 <div class="col-xs-12">
                                     <figure><center>
-                                        <img class="img-circle img-responsive" alt="" style="height: 300px; width: 300px" src=<%=profileDummy.setProfilePic().get(0)%>>
+                                        <img class="img-circle img-responsive" alt="" style="height: 300px; width: 300px" src=<%=profileBean.get(0).getPicture().get(0)%>>
                                     </center></figure>
                                 </div>
                             </div>
                             <div class="col-xs-12">
                                 <ul class="list-group"><center>
-                                    <li class="list-group-item"><%=profileDummy.setName().get(0)%></li>
-                                    <li class="list-group-item"><%=profileDummy.setOccupation().get(0)%></li>
-                                    <li class="list-group-item"><%=profileDummy.setWork()%></li>
-                                    <li class="list-group-item"><i class="fa fa-phone"></i> <%=profileDummy.setPhone()%></li>
-                                    <li class="list-group-item"><i class="fa fa-envelope"></i> <%=profileDummy.setEmail()%></li>
-                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileDummy.setGithub()%></li>
-                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileDummy.setLinkedIn()%></li>
+                                    <li class="list-group-item"><%=profileBean.get(0).getName()%></li>
+                                    <li class="list-group-item"><%=profileBean.get(0).getOccupation()%></li>
+                                    <li class="list-group-item"><%=profileBean.get(0).getWork()%></li>
+                                    <li class="list-group-item"><i class="fa fa-phone"></i> <%=profileBean.get(0).getPhone()%></li>
+                                    <li class="list-group-item"><i class="fa fa-envelope"></i> <%=profileBean.get(0).getEmail()%></li>
+                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileBean.get(0).getGithub()%></li>
+                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileBean.get(0).getLinkedIn()%></li>
                                 </center></ul>
                             </div>
                         </div>
@@ -566,35 +571,35 @@
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Summary</h4>
-                    <p><%=profileDummy.setSummary()%></p>
-                    <p><%=profileDummy.setSummary()%></p>
+                    <p><%=profileBean.get(0).getSummary()%></p>
+                    <p><%=profileBean.get(0).getSummary()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Research Interests</h4>
-                    <p><%=profileDummy.setResearchInterests()%></p>
+                    <p><%=profileBean.get(0).getResearchInterests()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Prior Experiences</h4>
                     <ul class="list-group">
                         <a class="list-group-item inactive-link" href="#">
                             <h4 class="list-group-item-heading">
-                                <%=profileDummy.setExperienceTitle().get(0)%>
+                                <%=profileBean.get(0).getExperienceTitle().get(0)%>
                             </h4>
                             <p class="list-group-item-text">
-                                <%=profileDummy.setExperienceBody()%>
+                                <%=profileBean.get(0).getExperienceBody()%>
                             </p>
                         </a>
                         <a class="list-group-item inactive-link" href="#">
-                            <h4 class="list-group-item-heading"><%=profileDummy.setExperienceTitle().get(0)%></h4>
+                            <h4 class="list-group-item-heading"><%=profileBean.get(0).getExperienceTitle().get(1)%></h4>
                             <p class="list-group-item-text">
-                                <%=profileDummy.setExperienceBody()%>
+                                <%=profileBean.get(0).getExperienceBody()%>
                             </p>
                             <ul>
                                 <li>
-                                    <%=profileDummy.setExperienceBody()%>
+                                    <%=profileBean.get(0).getExperienceBody()%>
                                 </li>
                                 <li>
-                                    <%=profileDummy.setExperienceBody()%>
+                                    <%=profileBean.get(0).getExperienceBody()%>
                                 </li>
                             </ul>
                             <p></p>
@@ -604,67 +609,73 @@
                 <div class="bs-callout bs-callout-danger">
                     <h4>Key Expertise</h4>
                     <ul class="list-group">
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
+                        <%for(int i = 0; i < 6; i++){%>
+                        <li class="list-group-item"><%=profileBean.get(0).getExpertise()%></li>
+                        <%}%>
                     </ul>
                 </div>
+
                 <div class="bs-callout bs-callout-danger">
                     <h4>Language and Platform Skills</h4>
                     <ul class="list-group">
                         <a class="list-group-item inactive-link" href="#">
                             <div class="progress">
-                                <div data-placement="top" style="width: <%=profileDummy.setSkills().get(0)%>;"
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(0)%>;"
                                      aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar"
                                      class="progress-bar progress-bar-success">
-                                    <span class="sr-only"><%=profileDummy.setSkills().get(0)%></span>
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(0)%></span>
                                     <span class="progress-type">Java/ JavaEE/ Spring Framework </span>
                                 </div>
                             </div>
                             <div class="progress">
-                                <div data-placement="top" style="width: <%=profileDummy.setSkills().get(1)%>;" aria-valuemax="100" aria-valuemin="0"
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(1)%>;" aria-valuemax="100" aria-valuemin="0"
                                      aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-success">
-                                    <span class="sr-only"><%=profileDummy.setSkills().get(1)%></span>
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(1)%></span>
                                     <span class="progress-type">PHP/ Lamp Stack</span>
                                 </div>
                             </div>
                             <div class="progress">
-                                <div data-placement="top" style="width: <%=profileDummy.setSkills().get(2)%>;" aria-valuemax="100" aria-valuemin="0"
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(2)%>;" aria-valuemax="100" aria-valuemin="0"
                                      aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-success">
-                                    <span class="sr-only"><%=profileDummy.setSkills().get(2)%></span>
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(2)%></span>
                                     <span class="progress-type">JavaScript/ NodeJS/ MEAN stack </span>
                                 </div>
                             </div>
                             <div class="progress">
-                                <div data-placement="top" style="width: <%=profileDummy.setSkills().get(3)%>;" aria-valuemax="100" aria-valuemin="0"
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(3)%>;" aria-valuemax="100" aria-valuemin="0"
                                      aria-valuenow="1" role="progressbar" class="progress-bar progress-bar-warning">
-                                    <span class="sr-only"><%=profileDummy.setSkills().get(3)%></span>
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(3)%></span>
                                     <span class="progress-type">Python/ Numpy/ Scipy</span>
                                 </div>
                             </div>
                             <div class="progress">
-                                <div data-placement="top" style="width: <%=profileDummy.setSkills().get(4)%>;" aria-valuemax="100" aria-valuemin="0"
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(4)%>;" aria-valuemax="100" aria-valuemin="0"
                                      aria-valuenow="60" role="progressbar"
                                      class="progress-bar progress-bar-warning">
-                                    <span class="sr-only"><%=profileDummy.setSkills().get(4)%></span>
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(4)%></span>
                                     <span class="progress-type">C</span>
                                 </div>
                             </div>
                             <div class="progress">
-                                <div data-placement="top" style="wi dth: <%=profileDummy.setSkills().get(5)%>;" aria-valuemax="100" aria-valuemin="0"
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(5)%>;" aria-valuemax="100" aria-valuemin="0"
                                      aria-valuenow="50" role="progressbar"
                                      class="progress-bar progress-bar-warning">
-                                    <span class="sr-only"><%=profileDummy.setSkills().get(5)%></span>
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(5)%></span>
                                     <span class="progress-type">C++</span>
                                 </div>
                             </div>
                             <div class="progress">
-                                <div data-placement="top" style="width: <%=profileDummy.setSkills().get(6)%>;" aria-valuemax="100" aria-valuemin="0"
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(6)%>;" aria-valuemax="100" aria-valuemin="0"
+                                     aria-valuenow="50" role="progressbar"
+                                     class="progress-bar progress-bar-warning">
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(5)%></span>
+                                    <span class="progress-type">C++</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div data-placement="top" style="width: <%=profileBean.get(0).getSkills().get(6)%>;" aria-valuemax="100" aria-valuemin="0"
                                      aria-valuenow="50" role="progressbar" class="progress-bar progress-bar-danger">
-                                    <span class="sr-only"><%=profileDummy.setSkills().get(6)%></span>
+                                    <span class="sr-only"><%=profileBean.get(0).getSkills().get(6)%></span>
                                     <span class="progress-type">Go</span>
                                 </div>
                             </div>
@@ -693,14 +704,14 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td><%=profileDummy.setDegree().get(0)%></td>
-                            <td><%=profileDummy.setYear()%></td>
-                            <td><%=profileDummy.setGPA()%></td>
+                            <td><%=profileBean.get(0).getDegree().get(0)%></td>
+                            <td><%=profileBean.get(0).getYear()%></td>
+                            <td><%=profileBean.get(0).getGpa()%></td>
                         </tr>
                         <tr>
-                            <td><%=profileDummy.setDegree().get(1)%></td>
-                            <td><%=profileDummy.setYear()%></td>
-                            <td><%=profileDummy.setGPA()%></td>
+                            <td><%=profileBean.get(0).getDegree().get(1)%></td>
+                            <td><%=profileBean.get(0).getYear()%></td>
+                            <td><%=profileBean.get(0).getGpa()%></td>
                         </tr>
                         </tbody>
                     </table>
@@ -708,21 +719,17 @@
                 <div class="bs-callout bs-callout-danger">
                     <%
                         ProjectDummy projectDummy = new ProjectDummy();
+                        List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
                     %>
                     <h4>Projects worked on: </h4>
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(0)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(1)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(2)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(3)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(4)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(5)%></a></li>
+                        <%for(int i = 0; i < 6; i++){%>
+                        <li class="list-group-item"><a href="ProjectDisplay.jsp"> <%=beanQueuen.get(i).getTitle()%></a></li>
+                        <%}%>
                     </ul>
                 </div>
             </div>
         </div>
-        <!-- resume -->
-
     </div>
     </div>
 </section>

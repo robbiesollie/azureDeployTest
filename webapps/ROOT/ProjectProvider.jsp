@@ -1,6 +1,9 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="techConnect.ProjectDummy" %>
-<%@ page import="techConnect.ProfileDummy" %><%-- Created by IntelliJ IDEA. --%>
+<%@ page import="techConnect.ProfileDummy" %>
+<%@ page import="DummyProjects.ProjectDummyBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="DummyProjects.ProfileDummyBean" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -534,6 +537,7 @@
 </section>
 <%
     ProfileDummy profileDummy = new ProfileDummy();
+    List<ProfileDummyBean> profileBean = profileDummy.getProfiles();
 %>
 <section>
     <div class="container">
@@ -546,19 +550,19 @@
                             <div class="col-lg-12">
                                 <div class="col-xs-12">
                                     <figure><center>
-                                        <img class="img-circle img-responsive" alt="" style="height: 300px; width: 300px" src=<%=profileDummy.setProfilePic().get(5)%>>
+                                        <img class="img-circle img-responsive" alt="" style="height: 300px; width: 300px" src=<%=profileBean.get(5).getPicture().get(5)%>>
                                     </center></figure>
                                 </div>
                             </div>
                             <div class="col-xs-12">
                                 <ul class="list-group"><center>
-                                    <li class="list-group-item"><%=profileDummy.setName().get(5)%></li>
-                                    <li class="list-group-item"><%=profileDummy.setOccupation().get(5)%></li>
-                                    <li class="list-group-item"><%=profileDummy.setMissionaryWork()%></li>
-                                    <li class="list-group-item"><i class="fa fa-phone"></i> <%=profileDummy.setPhone()%></li>
-                                    <li class="list-group-item"><i class="fa fa-envelope"></i> <%=profileDummy.setEmail()%></li>
-                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileDummy.setGithub()%></li>
-                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileDummy.setLinkedIn()%></li>
+                                    <li class="list-group-item"><%=profileBean.get(5).getName()%></li>
+                                    <li class="list-group-item"><%=profileBean.get(5).getOccupation()%></li>
+                                    <li class="list-group-item"><%=profileBean.get(5).getWork()%></li>
+                                    <li class="list-group-item"><i class="fa fa-phone"></i> <%=profileBean.get(5).getPhone()%></li>
+                                    <li class="list-group-item"><i class="fa fa-envelope"></i> <%=profileBean.get(5).getEmail()%></li>
+                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileBean.get(5).getGithub()%></li>
+                                    <li class="list-group-item"><i class="fa fa-envelope"></i><%=profileBean.get(5).getLinkedIn()%></li>
                                 </center></ul>
                             </div>
                         </div>
@@ -566,35 +570,35 @@
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Summary</h4>
-                    <p><%=profileDummy.setSummary()%></p>
-                    <p><%=profileDummy.setSummary()%></p>
+                    <p><%=profileBean.get(0).getSummary()%></p>
+                    <p><%=profileBean.get(0).getSummary()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Research Interests</h4>
-                    <p><%=profileDummy.setMissionaryInterests()%></p>
+                    <p><%=profileBean.get(0).getResearchInterests()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Prior Experiences</h4>
                     <ul class="list-group">
                         <a class="list-group-item inactive-link" href="#">
                             <h4 class="list-group-item-heading">
-                                <%=profileDummy.setExperienceTitle().get(5)%>
+                                <%=profileBean.get(0).getExperienceTitle().get(1)%>
                             </h4>
                             <p class="list-group-item-text">
-                                <%=profileDummy.setExperienceBody()%>
+                                <%=profileBean.get(0).getExperienceBody()%>
                             </p>
                         </a>
                         <a class="list-group-item inactive-link" href="#">
-                            <h4 class="list-group-item-heading"><%=profileDummy.setExperienceTitle().get(6)%></h4>
+                            <h4 class="list-group-item-heading"><%=profileBean.get(0).getExperienceTitle().get(2)%></h4>
                             <p class="list-group-item-text">
-                                <%=profileDummy.setExperienceBody()%>
+                                <%=profileBean.get(0).getExperienceBody()%>
                             </p>
                             <ul>
                                 <li>
-                                    <%=profileDummy.setExperienceBody()%>
+                                    <%=profileBean.get(0).getExperienceBody()%>
                                 </li>
                                 <li>
-                                    <%=profileDummy.setExperienceBody()%>
+                                    <%=profileBean.get(0).getExperienceBody()%>
                                 </li>
                             </ul>
                             <p></p>
@@ -604,26 +608,22 @@
                 <div class="bs-callout bs-callout-danger">
                     <h4>Key Expertise</h4>
                     <ul class="list-group">
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
-                        <li class="list-group-item"><%=profileDummy.setExpertise()%></li>
+                        <%for(int i = 0; i < 6; i++){%>
+                        <li class="list-group-item"><%=profileBean.get(1).getExpertise()%></li>
+                        <%}%>
                     </ul>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <%
                         ProjectDummy projectDummy = new ProjectDummy();
+                        List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
+
                     %>
                     <h4>Projects worked on: </h4>
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(0)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(1)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(2)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(3)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(4)%></a></li>
-                        <li class="list-group-item"><a href="#"> <%=projectDummy.setProjectTitle().get(5)%></a></li>
+                        <%for(int i = 0; i < 6; i++){%>
+                        <li class="list-group-item"><a href="ProjectDisplay.jsp"> <%=beanQueuen.get(i).getTitle()%></a></li>
+                        <%}%>
                     </ul>
                 </div>
             </div>

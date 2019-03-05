@@ -2,8 +2,16 @@ package DummyProjects;
 
 import techConnect.ProjectDummy;
 
-public class AmericasT4TApp {
-    private String title,contact, need, request, who, language, extra;
+public class ProjectDummyBean {
+    private String picture, title, date, contact, need, request, who, language, extra;
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
     public String getTitle() {
         return title;
@@ -11,6 +19,14 @@ public class AmericasT4TApp {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getContact() {

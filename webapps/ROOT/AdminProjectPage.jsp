@@ -1,6 +1,8 @@
-<%@ page import="java.util.Date" %>
 <%@ page import="techConnect.ProjectDummy" %>
-<%@ page import="techConnect.ProfileDummy" %><%-- Created by IntelliJ IDEA. --%>
+<%@ page import="techConnect.ProfileDummy" %>
+<%@ page import="DummyProjects.ProjectDummyBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="DummyProjects.ProfileDummyBean" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -57,7 +59,9 @@
         </div>
         <%
             ProjectDummy projectDummy = new ProjectDummy();
+            List<ProjectDummyBean> projectBean = projectDummy.getProjects();
             ProfileDummy profileDummy = new ProfileDummy();
+            List<ProfileDummyBean> profileBean = profileDummy.getProfiles();
         %>
         <div class="row">
             <div class="col-md-12">
@@ -67,13 +71,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src=<%=profileDummy.setProfilePic().get(4)%> width=100%>
+                                        <img src=<%=profileBean.get(4).getPicture().get(3)%> width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2><%=projectDummy.setProjectTitle().get(0)%> </h2></a>
-                                                <p><%=projectDummy.setNeed()%></p>
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(0).getTitle()%> </h2></a>
+                                                <p><%=projectBean.get(0).getNeed()%></p>
 
                                             </div>
                                             <div class="news-footer">
@@ -81,15 +85,15 @@
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            <%=projectDummy.setContact().get(0)%>
+                                                            <%=projectBean.get(0).getContact()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            <%=profileDummy.setName().get(3)%>
+                                                            <%=profileBean.get(3).getName()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            <%= projectDummy.setProjectDate().get(0) %>
+                                                            <%=projectBean.get(0).getDate() %>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -107,13 +111,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src=<%=profileDummy.setProfilePic().get(2)%>width=100%>
+                                        <img src=<%=profileBean.get(4).getPicture().get(2)%> width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2><%=projectDummy.setProjectTitle().get(1)%> </h2></a>
-                                                <p><%=projectDummy.setNeed().get(1)%></p>
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(1).getTitle()%> </h2></a>
+                                                <p><%=projectBean.get(1).getNeed()%></p>
 
                                             </div>
                                             <div class="news-footer">
@@ -121,15 +125,15 @@
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            <%=projectDummy.setContact().get(1)%>
+                                                            <%=projectBean.get(1).getContact()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            <%=profileDummy.setName().get(2)%>
+                                                            <%=profileBean.get(2).getName()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            <%=projectDummy.setProjectDate().get(1)%>
+                                                            <%=projectBean.get(1).getDate()%>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -147,29 +151,28 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src=<%=profileDummy.setProfilePic().get(6)%>width=100%>
+                                        <img src=<%=profileBean.get(4).getPicture().get(1)%> width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2><%=projectDummy.setProjectTitle().get(2)%></h2></a>
-                                                <p><%=projectDummy.setNeed().get(2)%></p>
-
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(2).getTitle()%></h2></a>
+                                                <p><%=projectBean.get(2).getNeed()%></p>
                                             </div>
                                             <div class="news-footer">
                                                 <div class="news-author">
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            <%=projectDummy.setContact().get(2)%>
+                                                            <%=projectBean.get(2).getContact()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            <%=profileDummy.setName().get(6)%>
+                                                            <%=profileBean.get(6).getName()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            <%=projectDummy.setProjectDate().get(2)%>
+                                                            <%=projectBean.get(2).getDate()%>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -184,11 +187,11 @@
                 <div class="row mb-2">
                     <div class="col-md-12">
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">1</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">2</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">3</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">Next</a></li>
                         </ul>
                     </div>
                 </div>

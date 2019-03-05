@@ -1,4 +1,6 @@
 <%@ page import="techConnect.ProjectDummy" %>
+<%@ page import="DummyProjects.ProjectDummyBean" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -532,6 +534,7 @@
 </section>
 <%
     ProjectDummy projectDummy = new ProjectDummy();
+    List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
 %>
 <section>
     <div class="container">
@@ -546,27 +549,27 @@
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Contact Information: </h4>
-                    <p><%=projectDummy.setContact().get(2)%></p>
+                    <p><%=beanQueuen.get(2).getContact()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Date: </h4>
-                    <p><%=projectDummy.setProjectDate().get(2)%></p>
+                    <p><%=beanQueuen.get(2).getDate()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>What do you need?</h4>
-                    <p><%=projectDummy.setRequest().get(2)%></p>
+                    <p><%=beanQueuen.get(2).getRequest()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Who is going to use this and how?</h4>
-                    <p><%=projectDummy.setWhoNeed().get(2)%></p>
+                    <p><%=beanQueuen.get(2).getWho()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>What language(s) do they speak?</h4>
-                    <p><%=projectDummy.setLanguageNeed().get(2)%></p>
+                    <p><%=beanQueuen.get(2).getLanguage()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Anything else volunteers should know?</h4>
-                    <p><%=projectDummy.setExtra().get(2)%></p>
+                    <p><%=beanQueuen.get(2).getExtra()%></p>
                 </div>
             </div>
         </div>

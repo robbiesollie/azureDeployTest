@@ -1,5 +1,7 @@
 <%@ page import="java.util.Date" %>
-<%@ page import="techConnect.ProjectDummy" %><%-- Created by IntelliJ IDEA. --%>
+<%@ page import="techConnect.ProjectDummy" %>
+<%@ page import="DummyProjects.ProjectDummyBean" %>
+<%@ page import="java.util.List" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <!-- https://bootsnipp.com/snippets/mMBqZ -->
@@ -63,14 +65,17 @@
         <div class="col-md-6">
             <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                 <div class="card-body d-flex flex-column align-items-start">
-                    <%ProjectDummy projectDummy = new ProjectDummy();%>
-                    <strong class="d-inline-block mb-2 text-primary"><%= projectDummy.setProjectTitle().get(0)%></strong>
+                    <%
+                        ProjectDummy projectDummy = new ProjectDummy();
+                        List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
+                    %>
+                    <strong class="d-inline-block mb-2 text-primary"><%= beanQueuen.get(0).getTitle()%></strong>
                     <h6 class="mb-0">
-                        <a class="text-dark" href="#"><%= projectDummy.setNeed().get(0)%></a>
+                        <a class="text-dark" href="ProjectDisplay.jsp"><%= beanQueuen.get(0).getNeed()%></a>
                     </h6>
-                    <div class="mb-1 text-muted small"><%=projectDummy.setProjectDate().get(0)%></div>
-                    <p class="card-text mb-auto"><%=projectDummy.setContact().get(0)%></p>
-                    <a class="btn btn-outline-primary btn-sm" role="button" href="http://www.jquery2dotnet.com/">Continue reading</a>
+                    <div class="mb-1 text-muted small"><%=beanQueuen.get(0).getDate()%></div>
+                    <p class="card-text mb-auto"><%=beanQueuen.get(0).getContact()%></p>
+                    <a class="btn btn-outline-primary btn-sm" role="button" href="ProjectDisplay.jsp">Continue reading</a>
                 </div>
                 <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/arch" style="width: 200px; height: 250px;">
             </div>
@@ -78,13 +83,13 @@
         <div class="col-md-6">
             <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                 <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block mb-2 text-success"><%= projectDummy.setProjectTitle().get(1)%></strong>
+                    <strong class="d-inline-block mb-2 text-success"><%= beanQueuen.get(1).getTitle()%></strong>
                     <h6 class="mb-0">
-                        <a class="text-dark" href="#"><%= projectDummy.setNeed().get(1)%></a>
+                        <a class="text-dark" href="ProjectDisplay.jsp"><%= beanQueuen.get(1).getNeed()%></a>
                     </h6>
-                    <div class="mb-1 text-muted small"><%=projectDummy.setProjectDate().get(1)%></div>
-                    <p class="card-text mb-auto"><%=projectDummy.setContact().get(1)%></p>
-                    <a class="btn btn-outline-success btn-sm" href="http://www.jquery2dotnet.com/">Continue reading</a>
+                    <div class="mb-1 text-muted small"><%=beanQueuen.get(1).getDate()%></div>
+                    <p class="card-text mb-auto"><%=beanQueuen.get(1).getContact()%></p>
+                    <a class="btn btn-outline-success btn-sm" href="ProjectDisplay.jsp">Continue reading</a>
                 </div>
                 <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/nature" style="width: 200px; height: 250px;">
             </div>
@@ -94,13 +99,13 @@
         <div class="col-md-6">
             <div class="card border-primary flex-md-row mb-4 shadow-sm h-md-250">
                 <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block mb-2 text-primary"><%= projectDummy.setProjectTitle().get(2)%></strong>
+                    <strong class="d-inline-block mb-2 text-primary"><%= beanQueuen.get(2).getTitle()%></strong>
                     <h6 class="mb-0">
-                        <a class="text-dark" href="#"><%= projectDummy.setNeed().get(2)%></a>
+                        <a class="text-dark" href="ProjectDisplay.jsp"><%= beanQueuen.get(2).getNeed()%></a>
                     </h6>
-                    <div class="mb-1 text-muted small"><%=projectDummy.setProjectDate().get(2)%></div>
-                    <p class="card-text mb-auto"><%=projectDummy.setContact().get(2)%></p>
-                    <a class="btn btn-outline-primary btn-sm" role="button" href="http://www.jquery2dotnet.com/">Continue reading</a>
+                    <div class="mb-1 text-muted small"><%=beanQueuen.get(2).getDate()%></div>
+                    <p class="card-text mb-auto"><%=beanQueuen.get(2).getContact()%></p>
+                    <a class="btn btn-outline-primary btn-sm" role="button" href="ProjectDisplay.jsp">Continue reading</a>
                 </div>
                 <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/arch" style="width: 200px; height: 250px;">
             </div>
@@ -108,13 +113,13 @@
         <div class="col-md-6">
             <div class="card border-success flex-md-row mb-4 shadow-sm h-md-250">
                 <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block mb-2 text-success"><%= projectDummy.setProjectTitle().get(3)%></strong>
+                    <strong class="d-inline-block mb-2 text-success"><%= beanQueuen.get(3).getTitle()%></strong>
                     <h6 class="mb-0">
-                        <a class="text-dark" href="#"><%= projectDummy.setNeed().get(3)%></a>
+                        <a class="text-dark" href="ProjectDisplay.jsp"><%= beanQueuen.get(3).getNeed()%></a>
                     </h6>
-                    <div class="mb-1 text-muted small"><%=projectDummy.setProjectDate().get(3)%></div>
-                    <p class="card-text mb-auto"><%=projectDummy.setContact().get(3)%></p>
-                    <a class="btn btn-outline-success btn-sm" href="http://www.jquery2dotnet.com/">Continue reading</a>
+                    <div class="mb-1 text-muted small"><%=beanQueuen.get(3).getDate()%></div>
+                    <p class="card-text mb-auto"><%=beanQueuen.get(3).getContact()%></p>
+                    <a class="btn btn-outline-success btn-sm" href="ProjectDisplay.jsp">Continue reading</a>
                 </div>
                 <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/nature" style="width: 200px; height: 250px;">
             </div>
@@ -124,13 +129,13 @@
         <div class="col-md-6">
             <div class="card text-white bg-primary flex-md-row mb-4 shadow-sm h-md-250">
                 <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block mb-2 text-white"><%= projectDummy.setProjectTitle().get(4)%></strong>
+                    <strong class="d-inline-block mb-2 text-white"><%=beanQueuen.get(4).getTitle()%></strong>
                     <h6 class="mb-0">
-                        <a class="text-white" href="#"><%= projectDummy.setNeed().get(4)%></a>
+                        <a class="text-white" href="ProjectDisplay.jsp"><%= beanQueuen.get(4).getNeed()%></a>
                     </h6>
-                    <div class="mb-1 text-white-50 small"><%=projectDummy.setProjectDate().get(4)%></div>
-                    <p class="card-text mb-auto"><%=projectDummy.setContact().get(4)%></p>
-                    <a class="btn btn-outline-light btn-sm" role="button" href="http://www.jquery2dotnet.com/">Continue reading</a>
+                    <div class="mb-1 text-white-50 small"><%=beanQueuen.get(4).getDate()%></div>
+                    <p class="card-text mb-auto"><%=beanQueuen.get(4).getContact()%></p>
+                    <a class="btn btn-outline-light btn-sm" role="button" href="ProjectDisplay.jsp">Continue reading</a>
                 </div>
                 <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/arch" style="width: 200px; height: 250px;">
             </div>
@@ -138,13 +143,13 @@
         <div class="col-md-6">
             <div class="card text-white bg-success flex-md-row mb-4 shadow-sm h-md-250">
                 <div class="card-body d-flex flex-column align-items-start">
-                    <strong class="d-inline-block mb-2 text-white"><%= projectDummy.setProjectTitle().get(5)%></strong>
+                    <strong class="d-inline-block mb-2 text-white"><%= beanQueuen.get(5).getTitle()%></strong>
                     <h6 class="mb-0">
-                        <a class="text-white" href="#"><%= projectDummy.setNeed().get(5)%></a>
+                        <a class="text-white" href="ProjectDisplay.jsp"><%=beanQueuen.get(5).getNeed()%></a>
                     </h6>
-                    <div class="mb-1 text-white-50 small"><%=projectDummy.setProjectDate().get(5)%></div>
-                    <p class="card-text mb-auto"><%=projectDummy.setContact().get(5)%></p>
-                    <a class="btn btn-outline-light btn-sm" href="http://www.jquery2dotnet.com/">Continue reading</a>
+                    <div class="mb-1 text-white-50 small"><%=beanQueuen.get(5).getDate()%></div>
+                    <p class="card-text mb-auto"><%=beanQueuen.get(5).getContact()%></p>
+                    <a class="btn btn-outline-light btn-sm" href="ProjectDisplay.jsp">Continue reading</a>
                 </div>
                 <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" src="//placeimg.com/250/250/nature" style="width: 200px; height: 250px;">
             </div>
@@ -155,9 +160,9 @@
             <div class="card mb-4">
                 <img class="card-img-top" src="//placeimg.com/290/180/any" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title"><%= projectDummy.setProjectTitle().get(6)%></h5>
-                    <p class="card-text"><%=projectDummy.setProjectDate().get(6) + "\n" +  projectDummy.setNeed().get(6)%></p>
-                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-dark btn-sm">Go somewhere</a>
+                    <h5 class="card-title"><%= beanQueuen.get(6).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(6).getDate() + "\n" + beanQueuen.get(6).getNeed()%></p>
+                    <a href="ProjectDisplay.jsp" class="btn btn-outline-dark btn-sm">Go somewhere</a>
                 </div>
             </div>
         </div>
@@ -165,9 +170,9 @@
             <div class="card mb-4 border-dark">
                 <img class="card-img-top" src="//placeimg.com/290/180/any" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title"><%= projectDummy.setProjectTitle().get(0)%></h5>
-                    <p class="card-text"><%=projectDummy.setProjectDate().get(0) +"\n" +  projectDummy.setNeed().get(0)%></p>
-                    <a href="http://www.jquery2dotnet.com/" class="btn btn-dark btn-sm">Go somewhere</a>
+                    <h5 class="card-title"><%= beanQueuen.get(0).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(0).getDate() +"\n" + beanQueuen.get(0).getNeed()%></p>
+                    <a href="ProjectDisplay.jsp" class="btn btn-dark btn-sm">Go somewhere</a>
                 </div>
             </div>
         </div>
@@ -175,9 +180,9 @@
             <div class="card mb-4 text-white bg-dark">
                 <img class="card-img-top" src="//placeimg.com/290/180/any" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title"><%= projectDummy.setProjectTitle().get(1)%></h5>
-                    <p class="card-text"><%=projectDummy.setProjectDate().get(1) +"\n" +  projectDummy.setNeed().get(1)%></p>
-                    <a href="http://www.jquery2dotnet.com/" class="btn btn-outline-light btn-sm">Go somewhere</a>
+                    <h5 class="card-title"><%= beanQueuen.get(1).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(1).getDate() +"\n" + beanQueuen.get(1).getNeed()%></p>
+                    <a href="ProjectDisplay.jsp" class="btn btn-outline-light btn-sm">Go somewhere</a>
                 </div>
             </div>
         </div>
@@ -190,9 +195,9 @@
             <div class="card mb-4 bg-dark text-white">
                 <img class="card-img" src="//placeimg.com/780/270/any" alt="Card image">
                 <div class="card-img-overlay">
-                    <h5 class="card-title"><%= projectDummy.setProjectTitle().get(2)%></h5>
-                    <p class="card-text"><%=projectDummy.setNeed().get(2)%></p>
-                    <p class="card-text"><%=projectDummy.setProjectDate().get(2)%></p>
+                    <h5 class="card-title"><%= beanQueuen.get(2).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(2).getNeed()%></p>
+                    <p class="card-text"><%=beanQueuen.get(2).getDate()%></p>
                 </div>
             </div>
         </div>
@@ -200,9 +205,9 @@
             <div class="card mb-4 bg-dark text-white">
                 <img class="card-img" src="//placeimg.com/250/180/any" alt="Card image">
                 <div class="card-img-overlay">
-                    <h5 class="card-title"><%= projectDummy.setProjectTitle().get(3)%></h5>
-                    <p class="card-text"><%= projectDummy.setNeed().get(6)%></p>
-                    <p class="card-text"><%=projectDummy.setProjectDate().get(2)%></p>
+                    <h5 class="card-title"><%=beanQueuen.get(3).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(3).getNeed()%></p>
+                    <p class="card-text"><%=beanQueuen.get(3).getDate()%></p>
                 </div>
             </div>
         </div>
@@ -215,9 +220,9 @@
             <div class="card">
                 <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title border-bottom pb-3"><%= projectDummy.setProjectTitle().get(4)%></h5>
-                    <p class="card-text"><%=projectDummy.setNeed().get(4)%></p>
-                    <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                    <h5 class="card-title border-bottom pb-3"><%= beanQueuen.get(4).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(4).getNeed()%></p>
+                    <a href="ProjectDisplay.jsp" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
                 </div>
             </div>
         </div>
@@ -225,9 +230,9 @@
             <div class="card">
                 <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title border-bottom pb-3"><%= projectDummy.setProjectTitle().get(5)%></h5>
-                    <p class="card-text"><%=projectDummy.setNeed().get(5)%></p>
-                    <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                    <h5 class="card-title border-bottom pb-3"><%=beanQueuen.get(5).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(5).getNeed()%></p>
+                    <a href="ProjectDisplay.jsp" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
                 </div>
             </div>
         </div>
@@ -235,9 +240,9 @@
             <div class="card bg-light">
                 <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title border-bottom pb-3"><%= projectDummy.setProjectTitle().get(6)%></h5>
-                    <p class="card-text"><%=projectDummy.setNeed().get(6)%>.</p>
-                    <a href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
+                    <h5 class="card-title border-bottom pb-3"><%= beanQueuen.get(6).getTitle()%></h5>
+                    <p class="card-text"><%=beanQueuen.get(6).getNeed()%>.</p>
+                    <a href="ProjectDisplay.jsp" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></a>
                 </div>
             </div>
         </div>
@@ -245,7 +250,7 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
+                <a class="page-link" href="projects.jsp" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                     <span class="sr-only">Previous</span>
                 </a>
@@ -254,7 +259,7 @@
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
+                <a class="page-link" href="projects.jsp" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                     <span class="sr-only">Next</span>
                 </a>
