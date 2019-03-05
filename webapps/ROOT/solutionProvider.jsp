@@ -722,7 +722,6 @@
                         List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
                     %>
                     <h4>Projects worked on: </h4>
-                    <h4>Projects worked on: </h4>
                     <ul class="list-group">
                         <%for(int i = 0; i < 6; i++){%>
                         <li class="list-group-item"><a href="ProjectDisplay.jsp"> <%=beanQueuen.get(i).getTitle()%></a></li>
