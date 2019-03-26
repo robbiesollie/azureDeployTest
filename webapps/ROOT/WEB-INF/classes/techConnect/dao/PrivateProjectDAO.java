@@ -13,7 +13,9 @@ public class PrivateProjectDAO extends ProjectDAO {
     //Creates a private project
     public void setPrivateProject(projectBean bean) throws java.sql.SQLException {
         if(bean.getProjectProviderID() != null && bean.getAdminID() != null && bean.getProjectName() != null && bean.getProposal() != null) {
-            DB.addPrivateProject(bean.getProjectProviderID(), bean.getAdminID(), bean.getProjectName(), bean.getProposal());
+            ResultSet rs = DB.addPrivateProject(bean.getProjectProviderID(), bean.getAdminID(), bean.getProjectName(), bean.getProposal());
+            bean.setProjectID(rs.getInt(1));
+            rs.close();
         }
     }
 
@@ -21,6 +23,7 @@ public class PrivateProjectDAO extends ProjectDAO {
     public projectBean getPrivateProjectFromName(projectBean bean) throws java.sql.SQLException {
         if(bean.getProjectName() != null) {
             ResultSet rs = DB.getPrivateProjects(bean.getProjectName());
+            rs.next();
             bean = makeBean(rs);
             rs.close();
             return bean;
@@ -29,10 +32,12 @@ public class PrivateProjectDAO extends ProjectDAO {
     }
 
     //Returns a bean containing the data concerning a private project once given an ID.
-    public Queue<projectBean> getPrivateProjectFromID(privateProjectBean bean) throws java.sql.SQLException {
+    public projectBean getPrivateProjectFromID(projectBean bean) throws java.sql.SQLException {
+        //System.out.println(bean.getProjectID());
         if(bean.getProjectID() > 0 && bean.getProjectID() != null) {
-            ResultSet rs = DB.getPrivateProjects(bean.getProjectID());
-            return makeBeanQueue(rs);
+            ResultSet rs = DB.getPrivteProjectsWithProjectID(bean.getProjectID());
+            rs.next();
+            return makeBean(rs);
         }
         return null;
     }
@@ -44,7 +49,7 @@ public class PrivateProjectDAO extends ProjectDAO {
     }
 
     //Returns all private projects an admin is assosiated with.
-    public Queue<projectBean>  getAdminsPrivateProtects(privateProjectBean bean) throws java.sql.SQLException {
+    public Queue<projectBean>  getAdminsPrivateProtects(projectBean bean) throws java.sql.SQLException {
         if(bean.getAdminID() != null && bean.getAdminID() > 0) {
             ResultSet rs = DB.getAdminsPrivateProjects(bean.getAdminID());
             return makeBeanQueue(rs);
@@ -55,9 +60,12 @@ public class PrivateProjectDAO extends ProjectDAO {
     //Makes a bean queue given a ResultSet containing private projects
     private Queue<projectBean> makeBeanQueue(ResultSet rs) throws java.sql.SQLException {
         Queue<projectBean> beanSet = new LinkedList<>();
-        do {
+        while(rs.next()) {
             beanSet.add(makeBean(rs));
-        }while(rs.next());
+        }
+        /*do {
+            beanSet.add(makeBean(rs));
+        }while(rs.next());*/
         rs.close();
         return beanSet;
     }

@@ -11,7 +11,7 @@ import java.util.Queue;
 public class UserDAO extends DAO {
 
     //creates a user who provides both problems and solutions
-    public void setDoubleProvider(providerBean bean, Boolean solutionProvider) throws java.sql.SQLException {
+    public void setDoubleProvider(providerBean bean) throws java.sql.SQLException {
         //char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate
         if(bean.getUserName() != null && bean.getPassword() != null && bean.getEmail() != null && bean.getAffiliation() != null && bean.getLocation() != null && bean.getGroup() != null) {
             DB.addUser('B', bean.getUserName(), bean.getPassword(), bean.getEmail(), bean.getAffiliation(), bean.getLocation(), bean.getGroup(), false);
@@ -47,11 +47,11 @@ public class UserDAO extends DAO {
     //creates a provider bean from a result set.
     protected providerBean makeBean(ResultSet rs) throws java.sql.SQLException {
         providerBean bean = new providerBean();
-        //rs.next();
+        rs.next();
         bean.setUserID(rs.getInt("userID"));
         bean.setUserName(rs.getString("user_name"));
         bean.setPassword(rs.getString("pass"));
-        bean.setAffiliation(rs.getString(""));
+        bean.setAffiliation(rs.getString("affiliationn"));
         bean.setEmail(rs.getString("email"));
         bean.setLocation(rs.getString("location"));
         bean.setGroup(rs.getBoolean("in_group"));

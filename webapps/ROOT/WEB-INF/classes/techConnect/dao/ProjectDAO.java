@@ -9,15 +9,18 @@ import java.util.Queue;
 public class ProjectDAO extends DAO {
 
     public void updateProject(projectBean bean) {
-        //int projectID, String name, String proposal, Boolean complete
         if(bean.getProjectID() != null && bean.getProjectID() > 0 && bean.getProjectName() != null && bean.getProposal() != null && bean.getComplete() != null) {
             DB.updateProjects(bean.getProjectID(), bean.getProjectName(), bean.getProposal(), bean.getComplete());
         }
     }
 
     public void setPairing(projectBean bean) {
-        if(bean.getProjectID() > 0 && bean.getSolutionProviderID() > 0 && bean.getAdminID() > 0) {
-            DB.addPairing(bean.getProjectID(), bean.getSolutionProviderID(), bean.getAdminID());
+        if(bean.getProjectID() > 0 && bean.getSolutionProviderID() > 0) {
+            if(bean.getAdminID() != null) {
+                DB.addPairing(bean.getProjectID(), bean.getSolutionProviderID(), bean.getAdminID());
+            }else{
+                DB.addPairing(bean.getProjectID(), bean.getSolutionProviderID(), 0);
+            }
         }
     }
 

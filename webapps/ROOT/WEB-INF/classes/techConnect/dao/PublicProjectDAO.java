@@ -13,7 +13,9 @@ public class PublicProjectDAO extends ProjectDAO {
     //Creates new public project
     public void setPublicProject(projectBean bean) throws java.sql.SQLException {
         if(bean.getProjectProviderID() != null && bean.getProjectName() != null && bean.getProposal() != null) {
-            DB.addPublicProject(bean.getProjectProviderID(), bean.getProjectName(), bean.getProposal());
+            ResultSet rs = DB.addPublicProject(bean.getProjectProviderID(), bean.getProjectName(), bean.getProposal());
+            bean.setProjectID(rs.getInt(1));
+            rs.close();
         }
     }
 
@@ -21,6 +23,7 @@ public class PublicProjectDAO extends ProjectDAO {
     public projectBean getPublicProjectFromName(projectBean bean) throws java.sql.SQLException {
         if(bean.getProjectName() != null) {
             ResultSet rs = DB.getPublicProjects(bean.getProjectName());
+            rs.next();
             bean = makeBean(rs);
             //rs.close();
             return bean;
@@ -28,12 +31,12 @@ public class PublicProjectDAO extends ProjectDAO {
         return null;
     }
 
-    //gets a project from a given ID
-    public Queue<projectBean> getProjectFromID(projectBean bean) throws java.sql.SQLException {
+    //gets a project from a given an ID
+    public projectBean getPublicProjectFromID(projectBean bean) throws java.sql.SQLException {
         if(bean.getProjectID() > 0) {
-            ResultSet rs = DB.getPublicProjects(bean.getProjectID());
-            //rs.next();
-            return makeBeanQueue(rs);
+            ResultSet rs = DB.getPublicProjectsWithProjectID(bean.getProjectID());
+            rs.next();
+            return makeBean(rs);
         }
         return null;
     }
@@ -47,9 +50,12 @@ public class PublicProjectDAO extends ProjectDAO {
 
     private Queue<projectBean> makeBeanQueue(ResultSet rs) throws java.sql.SQLException {
         Queue<projectBean> beanSet = new LinkedList<>();
-        do {
+        while(rs.next()) {
             beanSet.add(makeBean(rs));
-        } while(rs.next());
+        }
+        /*do {
+            beanSet.add(makeBean(rs));
+        } while(rs.next());*/
         rs.close();
         return beanSet;
     }

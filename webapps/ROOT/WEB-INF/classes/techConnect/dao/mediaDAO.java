@@ -8,9 +8,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class mediaDAO extends DAO {
-    public void setUserMedia(mediaBean bean) {
+    public void setUserMedia(mediaBean bean) throws java.sql.SQLException {
         if(bean.getUserID() != null && bean.getUserID() > 0 && bean.getAddress() != null) {
-            DB.addUserMedia(bean.getUserID(), bean.getAddress());
+            ResultSet rs = DB.addUserMedia(bean.getUserID(), bean.getAddress());
+            rs.next();
+            bean.setMediaID(rs.getInt(1));
         }
     }
 
@@ -19,14 +21,16 @@ public class mediaDAO extends DAO {
         return makeUserMediaBeanQueue(rs);
     }
 
-    public void setProjectMedia(mediaBean bean) {
-        if(bean.getUserID() != null && bean.getUserID() > 0 && bean.getAddress() != null) {
-            DB.addProjectMedia(bean.getUserID(), bean.getAddress());
+    public void setProjectMedia(mediaBean bean) throws java.sql.SQLException {
+        if(bean.getProjectID() != null && bean.getProjectID() > 0 && bean.getAddress() != null) {
+            ResultSet rs = DB.addProjectMedia(bean.getProjectID(), bean.getAddress());
+            rs.next();
+            bean.setMediaID(rs.getInt(1));
         }
     }
 
     public Queue<mediaBean> getProjectMedia(mediaBean bean) throws java.sql.SQLException {
-        ResultSet rs = DB.getProjectMedia(bean.getUserID());
+        ResultSet rs = DB.getProjectMedia(bean.getProjectID());
         return makeProjectMediaBeanQueue(rs);
     }
 
@@ -44,9 +48,9 @@ public class mediaDAO extends DAO {
 
     protected Queue<mediaBean> makeUserMediaBeanQueue(ResultSet rs) throws java.sql.SQLException {
         Queue<mediaBean> beanSet = new LinkedList<>();
-        do {
+        while(rs.next()) {
             beanSet.add(makeUserMediaBean(rs));
-        } while(rs.next());
+        }
         rs.close();
         return beanSet;
     }
@@ -60,9 +64,9 @@ public class mediaDAO extends DAO {
 
     protected Queue<mediaBean> makeProjectMediaBeanQueue(ResultSet rs) throws java.sql.SQLException {
         Queue<mediaBean> beanSet = new LinkedList<>();
-        do {
+        while(rs.next()) {
             beanSet.add(makeProjectMediaBean(rs));
-        } while(rs.next());
+        }
         rs.close();
         return beanSet;
     }
