@@ -1,5 +1,8 @@
-<%@ page import="java.util.Date" %><%-- Created by IntelliJ IDEA. --%>
-<%@ page import="techConnect.Login" %>
+<%@ page import="techConnect.ProjectDummy" %>
+<%@ page import="techConnect.ProfileDummy" %>
+<%@ page import="DummyProjects.ProjectDummyBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="DummyProjects.ProfileDummyBean" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -54,6 +57,12 @@
                 <h2>List of Private Projects</h2>
             </div>
         </div>
+        <%
+            ProjectDummy projectDummy = new ProjectDummy();
+            List<ProjectDummyBean> projectBean = projectDummy.getProjects();
+            ProfileDummy profileDummy = new ProfileDummy();
+            List<ProfileDummyBean> profileBean = profileDummy.getProfiles();
+        %>
         <div class="row">
             <div class="col-md-12">
                 <div class="row mb-2">
@@ -62,14 +71,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/product14-600x600.jpg" width=100%>
+                                        <img src=<%=profileBean.get(4).getPicture().get(3)%> width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2>A crowd walks on a New York street </h2></a>
-                                                <p>Hub because the aformentioned trio already offers its customers
-                                                    protections when dealing with the virtual currency.</p>
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(0).getTitle()%> </h2></a>
+                                                <p><%=projectBean.get(0).getNeed()%></p>
 
                                             </div>
                                             <div class="news-footer">
@@ -77,15 +85,15 @@
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Prashant Singh
+                                                            <%=projectBean.get(0).getContact()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Unassigned
+                                                            <%=profileBean.get(3).getName()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            posted
+                                                            <%=projectBean.get(0).getDate() %>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -103,14 +111,13 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/product14-600x600.jpg"width=100%>
+                                        <img src=<%=profileBean.get(4).getPicture().get(2)%> width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2>A crowd walks on a New York street </h2></a>
-                                                <p>Hub because the aformentioned trio already offers its customers
-                                                    protections when dealing with the virtual currency.</p>
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(1).getTitle()%> </h2></a>
+                                                <p><%=projectBean.get(1).getNeed()%></p>
 
                                             </div>
                                             <div class="news-footer">
@@ -118,15 +125,15 @@
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Prashant Singh
+                                                            <%=projectBean.get(1).getContact()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            assigned
+                                                            <%=profileBean.get(2).getName()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            posted
+                                                            <%=projectBean.get(1).getDate()%>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -144,30 +151,28 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/product14-600x600.jpg"width=100%>
+                                        <img src=<%=profileBean.get(4).getPicture().get(1)%> width=100%>
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
                                             <div class="news-content">
-                                                <a href="#"><h2>A crowd walks on a New York street </h2></a>
-                                                <p>Hub because the aformentioned trio already offers its customers
-                                                    protections when dealing with the virtual currency.</p>
-
+                                                <a href="ProjectDisplay.jsp"><h2><%=projectBean.get(2).getTitle()%></h2></a>
+                                                <p><%=projectBean.get(2).getNeed()%></p>
                                             </div>
                                             <div class="news-footer">
                                                 <div class="news-author">
                                                     <ul class="list-inline list-unstyled">
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-user"></i>
-                                                            Prashant Singh
+                                                            <%=projectBean.get(2).getContact()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-eye"></i>
-                                                            Assigned
+                                                            <%=profileBean.get(6).getName()%>
                                                         </li>
                                                         <li class="list-inline-item text-secondary">
                                                             <i class="fa fa-calendar"></i>
-                                                            posted
+                                                            <%=projectBean.get(2).getDate()%>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -182,11 +187,11 @@
                 <div class="row mb-2">
                     <div class="col-md-12">
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">1</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">2</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">3</a></li>
+                            <li class="page-item"><a class="page-link" href="projects.jsp">Next</a></li>
                         </ul>
                     </div>
                 </div>
