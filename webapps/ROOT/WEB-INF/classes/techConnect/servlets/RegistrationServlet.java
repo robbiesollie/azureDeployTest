@@ -23,20 +23,14 @@ public class RegistrationServlet extends HttpServlet {
             UserBean user = new UserBean();
             user.setFirstName(req.getParameter("first-name"));
             user.setLastName(req.getParameter("last-name"));
-            user.setUserName(req.getParameter("userName"));
+            user.setUsername(req.getParameter("username"));
+            user.setPassword(req.getParameter("password"));
             user.setEmail(req.getParameter("email"));
-            System.out.println(user.getFirstName());
-            System.out.println(user.getLastName());
-            System.out.println(user.getUsername());
-            System.out.println(user.getEmail());
-//            if (!UserDAO.getUsername(user.getUsername())) {
-//
-//                UserDAO.registration(user);
-//                resp.sendRedirect("login.jsp");
-//            }
-//            else {
-//                resp.sendRedirect("registration.jsp");
-//            }
+            System.out.println("Servlet: ");
+            System.out.println("Username: " + user.getUsername());
+            System.out.println("Email: " + user.getEmail());
+            UserDAO dao = new UserDAO();
+            dao.setUser(user);
         }
         catch (Throwable e) {
             System.out.println(e);

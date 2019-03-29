@@ -44,9 +44,13 @@ public class DBWrapper{
 
     //Creates a problem provider if userType = 'P', a solution provider if 'S', or both if 'B'
     public void addUser(char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate) throws java.sql.SQLException {
-        if((userType == 'B' || userType == 'P' || userType == 'S') && group != null && isPrivate != null) {
+//        if((userType == 'B' || userType == 'P' || userType == 'S') && group != null && isPrivate != null) {
+        System.out.println(group);
+        System.out.println(isPrivate);
+        if(group != null && isPrivate != null) {
             //Get and run Query for user table
             String query = getInsertUserQ(name, password, email, affiliation, location, group);
+            System.out.println(query);
             ResultSet rs = sendQuery(query);
             rs.next();
             int ID = rs.getInt(1);

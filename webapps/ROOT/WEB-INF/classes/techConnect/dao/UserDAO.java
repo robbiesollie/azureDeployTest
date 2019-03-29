@@ -1,5 +1,6 @@
 package techConnect.dao;
 
+import techConnect.beans.UserBean;
 import techConnect.beans.providerBean;
 import techConnect.dao.DAO;
 
@@ -20,6 +21,16 @@ public class UserDAO extends DAO {
 
     //Returns all needed user data when given an appropriate username and password
     public providerBean login(providerBean bean) throws java.sql.SQLException {
+    }
+        }
+            DB.addUser('X', bean.getUsername(), bean.getPassword(), bean.getEmail(), "", "", false, false);
+        if(bean.getUsername() != null && bean.getPassword() != null && bean.getEmail() != null) {
+        System.out.println(bean.getEmail());
+        System.out.println(bean.getPassword());
+        System.out.println(bean.getUsername());
+        //char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate
+    public void setUser(UserBean bean) throws java.sql.SQLException {
+    //creates a user who provides both problems and solutions
         if(bean.getUserName() != null && bean.getPassword() != null) {
             ResultSet rs = DB.login(bean.getUserName(), bean.getPassword());
             return makeBean(rs);

@@ -43,7 +43,7 @@ public class UserBean {
         return username;
     }
 
-    public void setUserName(String newUsername) {
+    public void setUsername(String newUsername) {
         username = newUsername;
     }
 

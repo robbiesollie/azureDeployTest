@@ -6,7 +6,7 @@
 <html>
 <!-- https://bootsnipp.com/snippets/mMBqZ -->
 <head>
-    <title>Register</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
