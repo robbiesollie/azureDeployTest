@@ -30,9 +30,9 @@ public class DAO {
 
     protected Queue<projectBean> makeProjectBeanQueue(ResultSet rs) throws java.sql.SQLException {
         Queue<projectBean> beanSet = new LinkedList<>();
-        do {
+        while (rs.next()) {
             beanSet.add(makeProjectBean(rs));
-        } while(rs.next());
+        }
         rs.close();
         return beanSet;
     }

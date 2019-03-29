@@ -15,15 +15,6 @@ public class ProjectProviderDAO extends UserDAO {
         }
     }
 
-    //Returns all needed user data when given an appropriate username and password
-    public providerBean projectProviderLogin(providerBean bean) throws java.sql.SQLException {
-        if(bean.getUserName() != null && bean.getPassword() != null) {
-            ResultSet rs = DB.problemProviderLogin(bean.getUserName(), bean.getPassword());
-            return makeBean(rs);
-        }
-        return null;
-    }
-
     //Returns a queue of all project providers
     public Queue<providerBean> getProjectProvider() throws java.sql.SQLException {
         ResultSet rs = DB.getProblemProviders();

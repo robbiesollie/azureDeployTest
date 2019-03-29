@@ -8,21 +8,10 @@ import java.util.Queue;
 public class adminDAO extends UserDAO {
 
     //Creates a new admin
-    public void addAdmin(providerBean bean) throws java.sql.SQLException {
+    public void setAdmin(providerBean bean) throws java.sql.SQLException {
         if(bean.getUserName() != null && bean.getPassword() != null && bean.getEmail() != null && bean.getAffiliation() != null && bean.getLocation() != null && bean.getGroup() != null) {
             DB.addAdmin(bean.getUserName(), bean.getPassword(), bean.getEmail(), bean.getAffiliation(), bean.getLocation(), bean.getGroup());
         }
-    }
-
-    //Returns admin data when given correct name and password
-    public providerBean adminLogin(providerBean bean) throws java.sql.SQLException {
-        if(bean.getUserName() != null && bean.getPassword() != null) {
-            ResultSet rs = DB.adminLogin(bean.getUserName(), bean.getPassword());
-            bean = makeBean(rs);
-            rs.close();
-            return bean;
-        }
-        return null;
     }
 
     //Returns all admins

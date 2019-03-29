@@ -9,9 +9,12 @@ import java.util.Queue;
 public class ContactDAO extends DAO {
 
     //Makes new contact
-    public void setCotact(contactBean bean) {
+    public void setCotact(contactBean bean) throws java.sql.SQLException {
         if(bean.getUserID() != null && bean.getUserID() > 0 && bean.getType() != null && bean.getAddress() != null) {
-            DB.addContact(bean.getUserID(), bean.getType(), bean.getAddress(), false);
+            ResultSet rs = DB.addContact(bean.getUserID(), bean.getType(), bean.getAddress(), false);
+            rs.next();
+            bean.setContactID(rs.getInt(1));
+            rs.close();
         }
     }
 
@@ -38,9 +41,9 @@ public class ContactDAO extends DAO {
     //creates a queue of beans
     protected Queue<contactBean> makeContactBeanQueue(ResultSet rs) throws java.sql.SQLException {
         Queue<contactBean> beanSet = new LinkedList<>();
-        do {
+        while(rs.next()) {
             beanSet.add(makeContactBean(rs));
-        } while(rs.next());
+        }
         rs.close();
         return beanSet;
     }

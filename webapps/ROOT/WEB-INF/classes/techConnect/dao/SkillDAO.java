@@ -11,9 +11,11 @@ import java.util.Queue;
 public class SkillDAO extends DAO {
 
     //Creates a new skill
-    public void setSkill(skillBean bean) {
+    public void setSkill(skillBean bean) throws java.sql.SQLException {
         if(bean.getSkillName() != null) {
-            DB.addSkill(bean.getSkillName());
+            ResultSet rs = DB.addSkill(bean.getSkillName());
+            rs.next();
+            bean.setSkillID(rs.getInt(1));
         }
     }
 
@@ -63,9 +65,9 @@ public class SkillDAO extends DAO {
     //puts several skill beans into a queue
     protected Queue<skillBean> makeSkillBeanQueue(ResultSet rs) throws java.sql.SQLException {
         Queue<skillBean> beanSet = new LinkedList<>();
-        do {
+        while(rs.next()) {
             beanSet.add(makeSkillBean(rs));
-        } while(rs.next());
+        }
         rs.close();
         return beanSet;
     }
