@@ -17,7 +17,7 @@ import java.util.Arrays;
 @WebServlet("/RegistrationServlet")
 
 public class RegistrationServlet extends HttpServlet {
-    /*@Override
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             UserBean user = new UserBean();
@@ -31,11 +31,12 @@ public class RegistrationServlet extends HttpServlet {
             System.out.println("Email: " + user.getEmail());
             UserDAO dao = new UserDAO();
             dao.setUser(user);
+            resp.sendRedirect("NewUserRegistration.jsp");
         }
         catch (Throwable e) {
-            System.out.println(e);
-            System.out.println(Arrays.toString(e.getStackTrace()));
+            e.printStackTrace();
+            resp.sendRedirect("registration.jsp");
         }
-    }*/
+    }
 
 }

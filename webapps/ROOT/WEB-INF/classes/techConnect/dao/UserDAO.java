@@ -19,18 +19,29 @@ public class UserDAO extends DAO {
         }
     }
 
-    //Returns all needed user data when given an appropriate username and password
-    public providerBean login(providerBean bean) throws java.sql.SQLException {
-    }
-        }
-            DB.addUser('X', bean.getUsername(), bean.getPassword(), bean.getEmail(), "", "", false, false);
+    public void setUser(UserBean bean) throws java.sql.SQLException {
+        //creates a user who provides both problems and solutions
+
+
         if(bean.getUsername() != null && bean.getPassword() != null && bean.getEmail() != null) {
         System.out.println(bean.getEmail());
         System.out.println(bean.getPassword());
         System.out.println(bean.getUsername());
         //char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate
-    public void setUser(UserBean bean) throws java.sql.SQLException {
-    //creates a user who provides both problems and solutions
+            DB.addUser('X', bean.getUsername(), bean.getPassword(), bean.getEmail(), "", "", false, false);
+        }
+    }
+//Returns all needed user data when given an appropriate username and password
+    public UserBean login(UserBean bean) throws java.sql.SQLException {
+        if(bean.getUsername() != null && bean.getPassword() != null) {
+            ResultSet rs = DB.login(bean.getUsername(), bean.getPassword());
+            return makeUserBean(rs);
+        }
+        bean.setValid(false);
+        return bean;
+    }
+
+    public providerBean login(providerBean bean) throws java.sql.SQLException {
         if(bean.getUserName() != null && bean.getPassword() != null) {
             ResultSet rs = DB.login(bean.getUserName(), bean.getPassword());
             return makeBean(rs);
@@ -67,6 +78,17 @@ public class UserDAO extends DAO {
         bean.setLocation(rs.getString("location"));
         bean.setGroup(rs.getBoolean("in_group"));
         bean.setActive(rs.getBoolean("active"));
+        return bean;
+    }
+
+    protected UserBean makeUserBean(ResultSet rs) throws java.sql.SQLException {
+        UserBean bean = new UserBean();
+        rs.next();
+        bean.setUserID(rs.getInt("userID"));
+        bean.setUsername(rs.getString("user_name"));
+        bean.setPassword(rs.getString("pass"));
+        bean.setEmail(rs.getString("email"));
+        bean.setValid(true);
         return bean;
     }
 }

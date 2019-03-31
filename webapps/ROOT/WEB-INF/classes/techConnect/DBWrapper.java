@@ -45,8 +45,6 @@ public class DBWrapper{
     //Creates a problem provider if userType = 'P', a solution provider if 'S', or both if 'B'
     public void addUser(char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate) throws java.sql.SQLException {
 //        if((userType == 'B' || userType == 'P' || userType == 'S') && group != null && isPrivate != null) {
-        System.out.println(group);
-        System.out.println(isPrivate);
         if(group != null && isPrivate != null) {
             //Get and run Query for user table
             String query = getInsertUserQ(name, password, email, affiliation, location, group);
@@ -377,8 +375,7 @@ public class DBWrapper{
         String rand = randomString();
         String insertedPass = rand + password;
         int pGroup = booleanToBit(group);
-        String userTab = "INSERT INTO users VALUES ('" + name + "', HASHBYTES('SHA2_512', '" + insertedPass + "'), '" + rand + "', '" + email + "', '" + affiliation + "', '" + location + "', " + pGroup + ", 1);";
-        return userTab;// + " SELECT SCOPE_IDENTITY();";
+        return "INSERT INTO users VALUES ('" + name + "', HASHBYTES('SHA2_512', '" + insertedPass + "'), '" + rand + "', '" + email + "', '" + affiliation + "', '" + location + "', " + pGroup + ", 1);";// + " SELECT SCOPE_IDENTITY();";
     }
 
     //creates and returns random string for salt.
