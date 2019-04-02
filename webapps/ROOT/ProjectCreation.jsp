@@ -56,10 +56,10 @@
             <input type="submit" value="Upload File"/>
         </form>
     </div>
-    <form>
+    <form action="ProjectCreationServlet">
         <div class="form-group">
             <label for = "ProjectName"> Project Name: </label>
-            <input type="text" class="form-control" id="ProjectName" placeholder="Enter Project Name">
+            <input type="text" class="form-control" id="ProjectName" name="ProjectName" placeholder="Enter Project Name">
         </div>
         <div class="form-group">
             <label for = "ProjectProvider"> Contact: </label>
@@ -81,8 +81,6 @@
             <label for="extra">Anything else? </label>
             <textarea id = "extra" rows="6" cols="78" placeholder="Describe the project">Please place anything else you would like to note.</textarea>
         </div>
-    </form>
-    <form action="Profile.jsp">
         <button id="done" class="btn btn-primary" value="next">Done!</button>
     </form>
 </section>
