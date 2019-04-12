@@ -56,30 +56,30 @@
             <input type="submit" value="Upload File"/>
         </form>
     </div>
-    <form action="ProjectCreationServlet">
+    <form action="ProjectCreationServlet" method="post">
         <div class="form-group">
             <label for = "ProjectName"> Project Name: </label>
             <input type="text" class="form-control" id="ProjectName" name="ProjectName" placeholder="Enter Project Name">
         </div>
         <div class="form-group">
             <label for = "ProjectProvider"> Contact: </label>
-            <input type="text" class="form-control" id="ProjectProvider" placeholder="Enter Primary Contact">
+            <input type="text" class="form-control" id="ProjectProvider" name="ProjectProvider" placeholder="Enter Primary Contact">
         </div>
         <div class="form-group">
             <label for="need">What do you need? </label>
-            <textarea id = "need" rows="6" cols="78" placeholder="Describe the project">Please type a short description of what the need is.</textarea>
+            <textarea id = "need" name="need" rows="6" cols="78" placeholder="Describe the project">Please type a short description of what the need is.</textarea>
         </div>
         <div class="form-group">
             <label for="who">Who is going to use it and how? </label>
-            <textarea id = "who" rows="6" cols="78" placeholder="Describe the project">Please answer here.</textarea>
+            <textarea id = "who" name="who" rows="6" cols="78" placeholder="Describe the project">Please answer here.</textarea>
         </div>
         <div class="form-group">
             <label for="language">What languages do they speak? </label>
-            <textarea id = "language" rows="6" cols="78" placeholder="Describe the project">Please place languages here.</textarea>
+            <textarea id = "language" name="language" rows="6" cols="78" placeholder="Describe the project">Please place languages here.</textarea>
         </div>
         <div class="form-group">
             <label for="extra">Anything else? </label>
-            <textarea id = "extra" rows="6" cols="78" placeholder="Describe the project">Please place anything else you would like to note.</textarea>
+            <textarea id = "extra" name = "extra" rows="6" cols="78" placeholder="Describe the project">Please place anything else you would like to note.</textarea>
         </div>
         <button id="done" class="btn btn-primary" value="next">Done!</button>
     </form>

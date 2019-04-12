@@ -24,7 +24,8 @@ public class ProjectProviderDAO extends UserDAO {
     //returns a bean containing the data of a project provider of a certain ID
     public providerBean getProjectProviderFromID(providerBean bean) throws java.sql.SQLException {
         if(bean.getUserID() != null && bean.getUserID() > 0) {
-            ResultSet rs = DB.getProblemProviders(bean.getUserID());
+            System.out.println(bean.getUserID());
+            ResultSet rs = DB.getUser(bean.getUserID());
             return makeBean(rs);
         }
         return null;

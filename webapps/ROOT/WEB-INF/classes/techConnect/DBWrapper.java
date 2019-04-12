@@ -128,6 +128,11 @@ public class DBWrapper{
         return sendQuery(query);
     }
 
+    public ResultSet getUser(int userID) {
+        String query = "SELECT * FROM users WHERE userID = " + userID + ";";
+        return sendQuery(query);
+    }
+
     //get all admins
     public ResultSet getAdmins() {
         String query = "SELECT * FROM users, system_admin WHERE userID = adminID;";
@@ -253,10 +258,12 @@ public class DBWrapper{
     public ResultSet addPublicProject(int providerID, String pName, String proposal) throws java.sql.SQLException {
         //code
         String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
+        System.out.println(query);
         ResultSet rs = sendQuery(query);
         rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO public_project VALUES (" + ID + ");";
+        System.out.println(query);
         sendQuery(query);
         return rs;
     }

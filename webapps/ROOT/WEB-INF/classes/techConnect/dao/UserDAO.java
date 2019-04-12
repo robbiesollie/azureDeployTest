@@ -34,6 +34,7 @@ public class UserDAO extends DAO {
 //Returns all needed user data when given an appropriate username and password
     public UserBean login(UserBean bean) throws java.sql.SQLException {
         if(bean.getUsername() != null && bean.getPassword() != null) {
+            System.out.println("username and password exist");
             ResultSet rs = DB.login(bean.getUsername(), bean.getPassword());
             return makeUserBean(rs);
         }
@@ -73,7 +74,7 @@ public class UserDAO extends DAO {
         bean.setUserID(rs.getInt("userID"));
         bean.setUserName(rs.getString("user_name"));
         bean.setPassword(rs.getString("pass"));
-        bean.setAffiliation(rs.getString("affiliationn"));
+        bean.setAffiliation(rs.getString("affiliation"));
         bean.setEmail(rs.getString("email"));
         bean.setLocation(rs.getString("location"));
         bean.setGroup(rs.getBoolean("in_group"));

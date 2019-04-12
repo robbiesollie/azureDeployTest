@@ -1,7 +1,9 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="techConnect.ProjectDummy" %>
 <%@ page import="DummyProjects.ProjectDummyBean" %>
-<%@ page import="java.util.List" %><%-- Created by IntelliJ IDEA. --%>
+<%@ page import="java.util.List" %>
+<%@ page import="techConnect.servlets.ProjectSelection" %>
+<%@ page import="techConnect.beans.UIProjectBean" %><%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <!-- https://bootsnipp.com/snippets/mMBqZ -->
@@ -66,8 +68,7 @@
             <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                 <div class="card-body d-flex flex-column align-items-start">
                     <%
-                        ProjectDummy projectDummy = new ProjectDummy();
-                        List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
+                        List<UIProjectBean> beanQueuen = ProjectSelection.getProjects();
                     %>
                     <strong class="d-inline-block mb-2 text-primary"><%= beanQueuen.get(0).getTitle()%></strong>
                     <h6 class="mb-0">

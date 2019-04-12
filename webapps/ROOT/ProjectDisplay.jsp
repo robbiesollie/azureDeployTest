@@ -1,6 +1,8 @@
 <%@ page import="techConnect.ProjectDummy" %>
 <%@ page import="DummyProjects.ProjectDummyBean" %>
 <%@ page import="java.util.List" %>
+<%@ page import="techConnect.beans.UIProjectBean" %>
+<%@ page import="techConnect.servlets.ProjectSelection" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -533,8 +535,17 @@
     </nav>
 </section>
 <%
+
     ProjectDummy projectDummy = new ProjectDummy();
     List<ProjectDummyBean> beanQueuen = projectDummy.getProjects();
+    System.out.println(request.getParameter("projectID"));
+    UIProjectBean bean = ProjectSelection.getProject(request.getParameter("projectID"));
+    System.out.println(bean);
+    System.out.println(bean.getNeed());
+    if (bean==null || request.getParameter("projectID") == null) {
+        response.sendRedirect("projects.jsp");
+        return;
+    }
 %>
 <section>
     <div class="container">
@@ -549,27 +560,27 @@
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Contact Information: </h4>
-                    <p><%=beanQueuen.get(2).getContact()%></p>
+                    <p><%=bean.getContact()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Date: </h4>
-                    <p><%=beanQueuen.get(2).getDate()%></p>
+                    <p><%=bean.getDate()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>What do you need?</h4>
-                    <p><%=beanQueuen.get(2).getRequest()%></p>
+                    <p><%=bean.getNeed()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Who is going to use this and how?</h4>
-                    <p><%=beanQueuen.get(2).getWho()%></p>
+                    <p><%=bean.getWho()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>What language(s) do they speak?</h4>
-                    <p><%=beanQueuen.get(2).getLanguage()%></p>
+                    <p><%=bean.getLanguage()%></p>
                 </div>
                 <div class="bs-callout bs-callout-danger">
                     <h4>Anything else volunteers should know?</h4>
-                    <p><%=beanQueuen.get(2).getExtra()%></p>
+                    <p><%=bean.getExtra()%></p>
                 </div>
             </div>
         </div>
