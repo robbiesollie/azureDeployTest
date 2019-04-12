@@ -43,13 +43,12 @@
     <h2><center>Login</center></h2>
     <form action="LoginServlet" method="post">
         <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" aria-describedby="name" placeholder="Enter Username">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Passwod">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

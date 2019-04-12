@@ -10,7 +10,7 @@ public class contactBean {
 
     public Integer getUserID() {return this.userID;}
 
-    public void setContactID(int setContactID) {this.contactID = contactID;}
+    public void setContactID(int contactID) {this.contactID = contactID;}
 
     public Integer getContactID() {return this.contactID;}
 

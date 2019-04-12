@@ -3,6 +3,10 @@ package techConnect.beans;
 //bean containing data for users
 public class UserBean {
 
+    private int userID;
+
+
+
     private String username;
     private String password;
     private String firstName;
@@ -10,7 +14,13 @@ public class UserBean {
     private String email;
     public boolean valid;
 
+    public int getUserID() {
+        return userID;
+    }
 
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -43,7 +53,7 @@ public class UserBean {
         return username;
     }
 
-    public void setUserName(String newUsername) {
+    public void setUsername(String newUsername) {
         username = newUsername;
     }
 

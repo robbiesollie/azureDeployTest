@@ -2,6 +2,7 @@ package techConnect.servlets;
 
 
 import techConnect.beans.UserBean;
+import techConnect.dao.UserDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,10 +23,12 @@ public class LoginServlet extends HttpServlet {
         {
 
             UserBean user = new UserBean();
-            user.setEmail(request.getParameter("email"));
+            user.setUsername(request.getParameter("username"));
             user.setPassword(request.getParameter("password"));
-            System.out.println(request.getParameter("email"));
-
+            System.out.println(user.getUsername());
+            System.out.println(user.getPassword());
+            UserDAO login = new UserDAO();
+            user = login.login(user);
 
             if (user.isValid())
             {
@@ -42,7 +45,8 @@ public class LoginServlet extends HttpServlet {
 
         catch (Throwable theException)
         {
-            System.out.println(theException);
+            theException.printStackTrace();
         }
     }
+
 }

@@ -27,13 +27,13 @@ public class DBWrapper{
     }
 
     private ResultSet sendQuery(String query) {
+        query += " SELECT SCOPE_IDENTITY();";
         if(verifyQuery(query)) {
             try {
                 connection = DriverManager.getConnection(url);
                 String schema = connection.getSchema();
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
-                resultSet.next();
                 return resultSet;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -44,10 +44,13 @@ public class DBWrapper{
 
     //Creates a problem provider if userType = 'P', a solution provider if 'S', or both if 'B'
     public void addUser(char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate) throws java.sql.SQLException {
-        if((userType == 'B' || userType == 'P' || userType == 'S') && group != null && isPrivate != null) {
+//        if((userType == 'B' || userType == 'P' || userType == 'S') && group != null && isPrivate != null) {
+        if(group != null && isPrivate != null) {
             //Get and run Query for user table
             String query = getInsertUserQ(name, password, email, affiliation, location, group);
+            System.out.println(query);
             ResultSet rs = sendQuery(query);
+            rs.next();
             int ID = rs.getInt(1);
             if (userType == 'P' || userType == 'B') {
                 //Query for pprov table
@@ -63,13 +66,19 @@ public class DBWrapper{
         }
     }
 
+    //
+    public ResultSet login(String userName, String passWord) {
+        String query = "SELECT * FROM users WHERE user_name = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
+        return sendQuery(query);
+    }
+
     //updates the user
     public void updateUser(String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate, String oldName, String oldPass) throws java.sql.SQLException {
         int gBit = 0;
         int pBit = 0;
         if(group) {gBit = 1;}
         if(isPrivate) {pBit = 1;}
-        String query = "UPDATE users SET userName = '" + name + "', pass = HASHBYTES('SHA2_512', salt + '" + password + "'), email = '" + email + "', affiliationN = '" + affiliation + "', location = '" + location + "', inGroup = " + gBit + ", active = " + pBit + " WHERE userName = '" + oldName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + oldPass + "');";
+        String query = "UPDATE users SET user_name = '" + name + "', pass = HASHBYTES('SHA2_512', salt + '" + password + "'), email = '" + email + "', affiliationN = '" + affiliation + "', location = '" + location + "', in_group = " + gBit + ", active = " + pBit + " WHERE user_name = '" + oldName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + oldPass + "');";
         sendQuery(query);
     }
 
@@ -77,33 +86,10 @@ public class DBWrapper{
     public void addAdmin(String name, String password, String email, String affiliation, String location, Boolean group) throws java.sql.SQLException {
         String query = getInsertUserQ(name, password, email, affiliation, location, group);
         ResultSet rs = sendQuery(query);
+        rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO system_admin VALUES (" + ID + ");";
         sendQuery(query);
-    }
-
-    //Returns data of problem provider with correct login input
-    public ResultSet problemProviderLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, problem_provider WHERE userID = pproviderID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
-    }
-
-    //Returns data of solution provider with correct login input
-    public ResultSet solutionProviderLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, solution_providers WHERE userID = sproviderID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
-    }
-
-    //Returns data of problem and solution provider with correct login input
-    public ResultSet doubleProviderLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, solution_providers, problem_provider WHERE userID = sproviderID AND userID = pproviderID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
-    }
-
-    //Returns data of admins with correct login input
-    public ResultSet adminLogin(String userName, String passWord) {
-        String query = "SELECT * FROM users, system_admin WHERE userID = adminID AND userName = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
-        return sendQuery(query);
     }
 
     //Returns all solution providers
@@ -161,9 +147,9 @@ public class DBWrapper{
     }
 
     //Used to add most contacts
-    public void addContact(int userID, String contactType, String address, Boolean primary) {
+    public ResultSet addContact(int userID, String contactType, String address, Boolean primary) {
         String query = "INSERT INTO additional_contacts VALUES (" + userID + ", '" + contactType + "', '" + address + "', " + booleanToBit(primary) + ");";
-        sendQuery(query);
+        return sendQuery(query);
     }
 
     public ResultSet getContacts(int userID) {
@@ -172,7 +158,7 @@ public class DBWrapper{
     }
 
     public void updateContact(int ID, String type, String address) {
-        String query = "Update additional_contacts SET contact_type = '" + type + "', contact_address = '" + address + "' WHERE contactID = " + ID + ";";
+        String query = "UPDATE additional_contacts SET contact_type = '" + type + "', contact_address = '" + address + "' WHERE contactID = " + ID + ";";
         sendQuery(query);
     }
 
@@ -186,9 +172,9 @@ public class DBWrapper{
     */
 
     //Creates query to add a skill
-    public void addSkill(String skillName) {
+    public ResultSet addSkill(String skillName) {
         String newSkillQuery = "INSERT INTO skills VALUES ('" + skillName + "');";
-        sendQuery(newSkillQuery);
+        return sendQuery(newSkillQuery);
     }
 
     //Gets all skills saved in DB.
@@ -205,7 +191,7 @@ public class DBWrapper{
 
     //Returns all the skills associated with a given user
     public ResultSet getUserSkills(int userID) {
-        String query = "SELECT skill_name FROM solution_providers_skills, skills WHERE skills.skillID = solution_providers_skills.skillID AND sproviderID = " + userID + ";";
+        String query = "SELECT * FROM solution_providers_skills, skills WHERE solution_providers_skills.skillID = skills.skillID and sproviderID = " + userID + ";";
         return sendQuery(query);
     }
 
@@ -230,9 +216,9 @@ public class DBWrapper{
     }
 
     //Creates query to add a media file for a project
-    public void addProjectMedia(int projectID, String address) {
+    public ResultSet addProjectMedia(int projectID, String address) {
         String query = "INSERT INTO project_media_files VALUES (" + projectID + ", '" + address + "');";
-        sendQuery(query);
+        return sendQuery(query);
     }
 
     //Returns all media file addresses assosiated with a given project.
@@ -247,14 +233,14 @@ public class DBWrapper{
     }
 
     //Adds a media file for a user
-    public void addUserMedia(int userID, String address) {
+    public ResultSet addUserMedia(int userID, String address) {
         String query = "INSERT INTO user_media_files VALUES (" + userID + ", '" + address + "');";
-        sendQuery(query);
+        return sendQuery(query);
     }
 
     //Returns all media file addresses assosiated with a given user.
     public ResultSet getUserMedia(int userID) {
-        String query = "Select * FROM user_media_files WHERE projectID = " + userID + ";";
+        String query = "Select * FROM user_media_files WHERE userID = " + userID + ";";
         return sendQuery(query);
     }
 
@@ -264,15 +250,15 @@ public class DBWrapper{
     }
 
     //Creates query to add a public project
-    public void addPublicProject(int providerID, String pName, String proposal) throws java.sql.SQLException {
+    public ResultSet addPublicProject(int providerID, String pName, String proposal) throws java.sql.SQLException {
         //code
         String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
         ResultSet rs = sendQuery(query);
-        //rs.next();
+        rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO public_project VALUES (" + ID + ");";
         sendQuery(query);
-        rs.close();
+        return rs;
     }
 
     //Gets all public projects
@@ -293,15 +279,26 @@ public class DBWrapper{
         return sendQuery(query);
     }
 
+    public ResultSet getPublicProjectsWithProjectID(int ID) {
+        String query = "Select * FROM project, public_project WHERE project.projectID = public_project.projectID AND project.projectID = '" + ID + "';";
+        return sendQuery(query);
+    }
+
+    public ResultSet getPrivteProjectsWithProjectID(int ID) {
+        String query = "Select * FROM project, private_project WHERE project.projectID = private_project.projectID AND project.projectID = '" + ID + "';";
+        return sendQuery(query);
+    }
+
     //Creates query to add a private project
-    public void addPrivateProject(int providerID, int adminID, String pName, String proposal) throws java.sql.SQLException {
+    public ResultSet addPrivateProject(int providerID, int adminID, String pName, String proposal) throws java.sql.SQLException {
         //code
         String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
         ResultSet rs = sendQuery(query);
-        //rs.next();
+        rs.next();
         int ID = rs.getInt(1);
         query = "INSERT INTO private_project VALUES (" + ID + ", " + adminID + ");";
         sendQuery(query);
+        return rs;
     }
 
     //returns all private projects
@@ -337,7 +334,8 @@ public class DBWrapper{
 
     //Creates query to add a pairing between solution provider and project
     public void addPairing(int projectID, int sproviderID, int adminID) {
-        String query = "INSERT INTO project_solution_providers VALUES (" + projectID + ", " + sproviderID + ", " + adminID + ", 1;";
+        String query = "INSERT INTO project_solution_providers VALUES (" + projectID + ", " + sproviderID + ", " + adminID + ", 1);";
+        if(adminID == 0) { query = "INSERT INTO project_solution_providers VALUES (" + projectID + ", " + sproviderID + ", null, 1);"; }
         sendQuery(query);
     }
 
@@ -354,7 +352,7 @@ public class DBWrapper{
     }
 
     public ResultSet getAdminsPairings(int adminID) {
-        String query = "SELECT project.projectID, projectName, userID, userName, adminID FROM project, project_solution_providers, users WHERE project.projectID = project_solution_providers.projectID AND users.userID = project_solution_providers.sproviderID and adminID = " + adminID + ";";
+        String query = "SELECT * FROM project, project_solution_providers, users WHERE project.projectID = project_solution_providers.projectID AND users.userID = project_solution_providers.sproviderID and adminID = " + adminID + ";";
         return sendQuery(query);
     }
 
@@ -377,8 +375,7 @@ public class DBWrapper{
         String rand = randomString();
         String insertedPass = rand + password;
         int pGroup = booleanToBit(group);
-        String userTab = "INSERT INTO users VALUES ('" + name + "', HASHBYTES('SHA2_512', '" + insertedPass + "'), '" + rand + "', '" + email + "', '" + affiliation + "', '" + location + "', " + pGroup + ", 1);";
-        return userTab + " " + "SELECT SCOPE_IDENTITY();";
+        return "INSERT INTO users VALUES ('" + name + "', HASHBYTES('SHA2_512', '" + insertedPass + "'), '" + rand + "', '" + email + "', '" + affiliation + "', '" + location + "', " + pGroup + ", 1);";// + " SELECT SCOPE_IDENTITY();";
     }
 
     //creates and returns random string for salt.

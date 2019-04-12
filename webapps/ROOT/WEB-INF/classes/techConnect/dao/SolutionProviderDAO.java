@@ -17,15 +17,6 @@ public class SolutionProviderDAO extends UserDAO {
         }
     }
 
-    //Returns user data when given the correct name and password
-    public providerBean solutionProviderLogin(providerBean bean) throws java.sql.SQLException {
-        if(bean.getUserName() != null && bean.getPassword() != null) {
-            ResultSet rs = DB.solutionProviderLogin(bean.getUserName(), bean.getPassword());
-            return makeBean(rs);
-        }
-        return null;
-    }
-
     //Returns all solution providers
     public Queue<providerBean> getSolutionProvider() throws java.sql.SQLException {
         ResultSet rs = DB.getSolutionProviders();
