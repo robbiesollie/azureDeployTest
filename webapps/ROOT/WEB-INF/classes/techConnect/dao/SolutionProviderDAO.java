@@ -13,7 +13,8 @@ public class SolutionProviderDAO extends UserDAO {
     public void setSolutionProvider(providerBean bean) throws java.sql.SQLException {
         //char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate
         if(bean.getUserName() != null && bean.getPassword() != null && bean.getEmail() != null && bean.getAffiliation() != null && bean.getLocation() != null && bean.getGroup() != null) {
-            DB.addUser('S', bean.getUserName(), bean.getPassword(), bean.getEmail(), bean.getAffiliation(), bean.getLocation(), bean.getGroup(), false);
+            int ID = DB.addUser('S', bean.getUserName(), bean.getPassword(), bean.getEmail(), bean.getAffiliation(), bean.getLocation(), bean.getGroup(), false);
+            bean.setUserID(ID);
         }
     }
 

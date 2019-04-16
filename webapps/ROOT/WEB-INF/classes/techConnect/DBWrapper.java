@@ -28,6 +28,7 @@ public class DBWrapper{
 
     private ResultSet sendQuery(String query) {
         query += " SELECT SCOPE_IDENTITY();";
+        //System.out.println(query);
         if(verifyQuery(query)) {
             try {
                 connection = DriverManager.getConnection(url);
@@ -43,12 +44,11 @@ public class DBWrapper{
     }
 
     //Creates a problem provider if userType = 'P', a solution provider if 'S', or both if 'B'
-    public void addUser(char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate) throws java.sql.SQLException {
+    public int addUser(char userType, String name, String password, String email, String affiliation, String location, Boolean group, Boolean isPrivate) throws java.sql.SQLException {
 //        if((userType == 'B' || userType == 'P' || userType == 'S') && group != null && isPrivate != null) {
         if(group != null && isPrivate != null) {
             //Get and run Query for user table
             String query = getInsertUserQ(name, password, email, affiliation, location, group);
-            System.out.println(query);
             ResultSet rs = sendQuery(query);
             rs.next();
             int ID = rs.getInt(1);
@@ -63,12 +63,14 @@ public class DBWrapper{
                 sendQuery(query);
             }
             rs.close();
+            return ID;
         }
+        return 0;
     }
 
     //
     public ResultSet login(String userName, String passWord) {
-        String query = "SELECT * FROM users WHERE user_name = '" + userName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + passWord + "');";
+        String query = "SELECT * FROM users WHERE user_name = '" + escape(userName) + "' AND pass = HASHBYTES('SHA2_512', salt + '" + escape(passWord) + "');";
         return sendQuery(query);
     }
 
@@ -78,13 +80,13 @@ public class DBWrapper{
         int pBit = 0;
         if(group) {gBit = 1;}
         if(isPrivate) {pBit = 1;}
-        String query = "UPDATE users SET user_name = '" + name + "', pass = HASHBYTES('SHA2_512', salt + '" + password + "'), email = '" + email + "', affiliationN = '" + affiliation + "', location = '" + location + "', in_group = " + gBit + ", active = " + pBit + " WHERE user_name = '" + oldName + "' AND pass = HASHBYTES('SHA2_512', salt + '" + oldPass + "');";
+        String query = "UPDATE users SET user_name = '" + escape(name) + "', pass = HASHBYTES('SHA2_512', salt + '" + escape(password) + "'), email = '" + escape(email) + "', affiliationN = '" + escape(affiliation) + "', location = '" + escape(location) + "', in_group = " + gBit + ", active = " + pBit + " WHERE user_name = '" + escape(oldName) + "' AND pass = HASHBYTES('SHA2_512', salt + '" + escape(oldPass) + "');";
         sendQuery(query);
     }
 
     //creates an admin
     public void addAdmin(String name, String password, String email, String affiliation, String location, Boolean group) throws java.sql.SQLException {
-        String query = getInsertUserQ(name, password, email, affiliation, location, group);
+        String query = getInsertUserQ(escape(name), escape(password), escape(email), escape(affiliation), escape(location), group);
         ResultSet rs = sendQuery(query);
         rs.next();
         int ID = rs.getInt(1);
@@ -100,7 +102,7 @@ public class DBWrapper{
 
     //Returns solution provider with the given name
     public ResultSet getSolutionProviders(String name) {
-        String query = "SELECT * FROM users, solution_providers WHERE users.userID = solution_providers.sproviderID AND userName = '" + name + "';";
+        String query = "SELECT * FROM users, solution_providers WHERE users.userID = solution_providers.sproviderID AND userName = '" + escape(name) + "';";
         return sendQuery(query);
     }
 
@@ -118,7 +120,7 @@ public class DBWrapper{
 
     //Get a problem provider from a name
     public ResultSet getProblemProviders(String name) {
-        String query = "SELECT * FROM users, problem_provider WHERE userID = pproviderID AND userName = '" + name +"';";
+        String query = "SELECT * FROM users, problem_provider WHERE userID = pproviderID AND userName = '" + escape(name) +"';";
         return sendQuery(query);
     }
 
@@ -136,7 +138,7 @@ public class DBWrapper{
 
     //get all admins of the given name
     public ResultSet getAdmins(String name) {
-        String query = "SELECT * FROM users, system_admin WHERE userID = adminID AND userName = '" + name + ";";
+        String query = "SELECT * FROM users, system_admin WHERE userID = adminID AND userName = '" + escape(name) + ";";
         return sendQuery(query);
     }
 
@@ -148,7 +150,7 @@ public class DBWrapper{
 
     //Used to add most contacts
     public ResultSet addContact(int userID, String contactType, String address, Boolean primary) {
-        String query = "INSERT INTO additional_contacts VALUES (" + userID + ", '" + contactType + "', '" + address + "', " + booleanToBit(primary) + ");";
+        String query = "INSERT INTO additional_contacts VALUES (" + userID + ", '" + escape(contactType) + "', '" + escape(address) + "', " + booleanToBit(primary) + ");";
         return sendQuery(query);
     }
 
@@ -158,7 +160,7 @@ public class DBWrapper{
     }
 
     public void updateContact(int ID, String type, String address) {
-        String query = "UPDATE additional_contacts SET contact_type = '" + type + "', contact_address = '" + address + "' WHERE contactID = " + ID + ";";
+        String query = "UPDATE additional_contacts SET contact_type = '" + escape(type) + "', contact_address = '" + escape(address) + "' WHERE contactID = " + ID + ";";
         sendQuery(query);
     }
 
@@ -173,7 +175,7 @@ public class DBWrapper{
 
     //Creates query to add a skill
     public ResultSet addSkill(String skillName) {
-        String newSkillQuery = "INSERT INTO skills VALUES ('" + skillName + "');";
+        String newSkillQuery = "INSERT INTO skills VALUES ('" + escape(skillName) + "');";
         return sendQuery(newSkillQuery);
     }
 
@@ -184,8 +186,8 @@ public class DBWrapper{
     }
 
     //Sets a skill to a user
-    public void setUserSkills(int skillID, int userID) {
-        String query = "INSERT INTO solution_providers_skills VALUES (" + skillID + ", " + userID + ");";
+    public void setUserSkills(int skillID, int userID, int level) {
+        String query = "INSERT INTO solution_providers_skills VALUES (" + skillID + ", " + userID + ", " + level + ");";
         sendQuery(query);
     }
 
@@ -197,7 +199,7 @@ public class DBWrapper{
 
     //changes skill name
     public void updateSkills(int ID, String skillName) {
-        String query = "UPDATE skills SET skill_name = '" + skillName + "' WHERE skillID = " + ID + ";";
+        String query = "UPDATE skills SET skill_name = '" + escape(skillName) + "' WHERE skillID = " + ID + ";";
         sendQuery(query);
     }
 
@@ -217,7 +219,7 @@ public class DBWrapper{
 
     //Creates query to add a media file for a project
     public ResultSet addProjectMedia(int projectID, String address) {
-        String query = "INSERT INTO project_media_files VALUES (" + projectID + ", '" + address + "');";
+        String query = "INSERT INTO project_media_files VALUES (" + projectID + ", '" + escape(address) + "');";
         return sendQuery(query);
     }
 
@@ -234,7 +236,7 @@ public class DBWrapper{
 
     //Adds a media file for a user
     public ResultSet addUserMedia(int userID, String address) {
-        String query = "INSERT INTO user_media_files VALUES (" + userID + ", '" + address + "');";
+        String query = "INSERT INTO user_media_files VALUES (" + userID + ", '" + escape(address) + "');";
         return sendQuery(query);
     }
 
@@ -252,7 +254,7 @@ public class DBWrapper{
     //Creates query to add a public project
     public ResultSet addPublicProject(int providerID, String pName, String proposal) throws java.sql.SQLException {
         //code
-        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
+        String query = "INSERT INTO project VALUES(" + providerID +", '" + escape(pName)+ "', '" + escape(proposal) + "', 0);";
         ResultSet rs = sendQuery(query);
         rs.next();
         int ID = rs.getInt(1);
@@ -275,7 +277,7 @@ public class DBWrapper{
 
     //Gets a public project matching the name
     public ResultSet getPublicProjects(String name) {
-        String query = "Select * FROM project, public_project WHERE project.projectID = public_project.projectID AND projectName = '" + name + "';";
+        String query = "Select * FROM project, public_project WHERE project.projectID = public_project.projectID AND projectName = '" + escape(name) + "';";
         return sendQuery(query);
     }
 
@@ -292,7 +294,7 @@ public class DBWrapper{
     //Creates query to add a private project
     public ResultSet addPrivateProject(int providerID, int adminID, String pName, String proposal) throws java.sql.SQLException {
         //code
-        String query = "INSERT INTO project VALUES(" + providerID +", '" + pName+ "', '" + proposal + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
+        String query = "INSERT INTO project VALUES(" + providerID +", '" + escape(pName)+ "', '" + escape(proposal) + "', 0); SELECT SCOPE_IDENTITY() AS NewID;";
         ResultSet rs = sendQuery(query);
         rs.next();
         int ID = rs.getInt(1);
@@ -315,14 +317,14 @@ public class DBWrapper{
 
     //returns a project with a given name
     public ResultSet getPrivateProjects(String name) {
-        String query = "Select * FROM project, private_project WHERE project.projectID = private_project.projectID AND projectName = '" + name + "';";
+        String query = "Select * FROM project, private_project WHERE project.projectID = private_project.projectID AND projectName = '" + escape(name) + "';";
         return sendQuery(query);
     }
 
     public void updateProjects(int projectID, String name, String proposal, Boolean complete) {
         int cBit = 0;
         if(complete) {cBit = 1;}
-        String query = "UPDATE project SET projectName = '" + name + "', proposal = '" + proposal + "', complete = " + cBit + " WHERE projectID = " + projectID + ";";
+        String query = "UPDATE project SET projectName = '" + escape(name) + "', proposal = '" + escape(proposal) + "', complete = " + cBit + " WHERE projectID = " + projectID + ";";
         sendQuery(query);
     }
 
@@ -400,5 +402,9 @@ public class DBWrapper{
         generatedString = generatedString.replace("'", "\"");
 
         return generatedString;
+    }
+
+    public String escape(String s) {
+        return s.replace("'", "''");
     }
 }

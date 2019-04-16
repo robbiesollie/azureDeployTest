@@ -1,6 +1,14 @@
 package techConnect;
 
 import DummyProjects.ProjectDummyBean;
+import techConnect.beans.mediaBean;
+import techConnect.beans.projectBean;
+import techConnect.beans.projectProviderBean;
+import techConnect.beans.providerBean;
+import techConnect.dao.ProjectDAO;
+import techConnect.dao.ProjectProviderDAO;
+import techConnect.dao.PublicProjectDAO;
+import techConnect.dao.mediaDAO;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,20 +20,155 @@ public class ProjectDummy {
         return new ProjectDummy();
     }
 
-    public List<ProjectDummyBean> getProjects() {
-        List<ProjectDummyBean> beanQueuen = new LinkedList<>();
+    public List<projectBean> getProjects() throws java.sql.SQLException {
+        List<providerBean> beanQueuenUser = new LinkedList<>();
+
+        mediaDAO MD = new mediaDAO();
+        ProjectProviderDAO PDAO = new ProjectProviderDAO();
+        //DB.addUser(userType1, name1, pass1, mail1, afil1, loca1, g1, p1);
+        providerBean beanU = new providerBean();
+        beanU.setUserName("LinkCat");
+        beanU.setPassword("Bag");
+        beanU.setAffiliation("South Church");
+        beanU.setLocation("Texas");
+        beanU.setEmail("kevintbaggett@gmail.com");
+        beanU.setGroup(false);
+        PDAO.setDoubleProvider(beanU);
+        beanQueuenUser.add(beanU);
+        mediaBean mb = new mediaBean();
+        mb.setUserID(beanU.getUserID());
+        mb.setAddress("\"assets/TechConnectCats/linktocat.png\"");
+        MD.setUserMedia(mb);
+
+
+        beanU = new providerBean();
+        beanU.setUserName("BearCat");
+        beanU.setPassword("Ban");
+        beanU.setAffiliation("Naxi");
+        beanU.setLocation("China");
+        beanU.setEmail("MSB863786@IsleConx.com");
+        beanU.setGroup(false);
+        PDAO.setDoubleProvider(beanU);
+        beanQueuenUser.add(beanU);
+        mb = new mediaBean();
+        mb.setUserID(beanU.getUserID());
+        mb.setAddress("\"assets/TechConnectCats/bear-cavalry.png\"");
+        MD.setUserMedia(mb);
+
+        beanU = new providerBean();
+        beanU.setUserName("BouncerCat");
+        beanU.setPassword("Win");
+        beanU.setAffiliation("Indonesia Church");
+        beanU.setLocation("Indonesia");
+        beanU.setEmail("adw499764@eastofdateline.com");
+        beanU.setGroup(false);
+        PDAO.setDoubleProvider(beanU);
+        beanQueuenUser.add(beanU);
+        mb = new mediaBean();
+        mb.setUserID(beanU.getUserID());
+        mb.setAddress("\"assets/TechConnectCats/bouncercat.png\"");
+        MD.setUserMedia(mb);
+
+        beanU = new providerBean();
+        beanU.setUserName("DojoCat");
+        beanU.setPassword("Ell");
+        beanU.setAffiliation("Arizona Baptist University");
+        beanU.setLocation("Arizona");
+        beanU.setEmail("wse815775@eurasianetworks.com");
+        beanU.setGroup(false);
+        PDAO.setDoubleProvider(beanU);
+        beanQueuenUser.add(beanU);
+        mb = new mediaBean();
+        mb.setUserID(beanU.getUserID());
+        mb.setAddress("\"assets/TechConnectCats/dojocat.jpg\"");
+        MD.setUserMedia(mb);
+
+        beanU = new providerBean();
+        beanU.setUserName("CoderCat");
+        beanU.setPassword("LAJ");
+        beanU.setAffiliation("Arizona Baptist University");
+        beanU.setLocation("Arizona");
+        beanU.setEmail("Larry@Baptist.com");
+        beanU.setGroup(true);
+        PDAO.setDoubleProvider(beanU);
+        beanQueuenUser.add(beanU);
+        mb = new mediaBean();
+        mb.setUserID(beanU.getUserID());
+        mb.setAddress("\"assets/TechConnectCats/femalecodertocat.png\"");
+        MD.setUserMedia(mb);
+
+        beanU = new providerBean();
+        beanU.setUserName("FoundingFatherCat");
+        beanU.setPassword("frd");
+        beanU.setAffiliation("TechCorp");
+        beanU.setLocation("New York City");
+        beanU.setEmail("TechCorp@gmail.com");
+        beanU.setGroup(true);
+        PDAO.setDoubleProvider(beanU);
+        beanQueuenUser.add(beanU);
+        mb = new mediaBean();
+        mb.setUserID(beanU.getUserID());
+        mb.setAddress("\"assets/TechConnectCats/foundingfather_v2.png\"");
+        MD.setUserMedia(mb);
+
+        beanU = new providerBean();
+        beanU.setUserName("RiddlerCat");
+        beanU.setPassword("dall");
+        beanU.setAffiliation("Southern Cross");
+        beanU.setLocation("Florida");
+        beanU.setEmail("JCR929215@AsiaNetRising.com");
+        beanU.setGroup(true);
+        PDAO.setDoubleProvider(beanU);
+        beanQueuenUser.add(beanU);
+        mb = new mediaBean();
+        mb.setUserID(beanU.getUserID());
+        mb.setAddress("\"assets/TechConnectCats/riddlocat.png\"");
+        MD.setUserMedia(mb);
+
+        //System.out.println(beanQueuenUser.get(0).getUserID());
+
+
+        List<projectBean> beanQueuen = new LinkedList<>();
+        PublicProjectDAO PD = new PublicProjectDAO();
         for (int i = 0; i < 7; i++) {
-            ProjectDummyBean bean = new ProjectDummyBean();
-            bean.setPicture(getPic().get(i));
-            bean.setTitle(getTitle().get(i));
-            bean.setDate(getDate().get(i));
-            bean.setContact(getContact().get(i));
-            bean.setNeed(getNeed().get(i));
-            bean.setRequest(getRequest().get(i));
+            projectBean bean = new projectBean();
+            bean.setProjectProviderID(beanQueuenUser.get(i).getUserID());
+            //bean.setPicture(getPic().get(i));
+            bean.setProjectName(getTitle().get(i));
+            //bean.setDate(getDate().get(i));
+            //bean.setContact(getContact().get(i));
+            bean.setProposal(getNeed().get(i) + getRequest().get(i) + getWhoNeed().get(i) + getLanguageNeed().get(i) + getExtra().get(i));
+            /*bean.setRequest(getRequest().get(i));
             bean.setWho(getWhoNeed().get(i));
             bean.setLanguage(getLanguageNeed().get(i));
-            bean.setExtra(getExtra().get(i));
+            bean.setExtra(getExtra().get(i));*/
             beanQueuen.add(bean);
+            PD.setPublicProject(bean);
+            mb = new mediaBean();
+            mb.setProjectID(beanQueuen.get(i).getProjectID());
+            mb.setAddress(getPic().get(i));
+            MD.setProjectMedia(mb);
+
+
+            /*System.out.println();
+            System.out.println(bean.getPicture());
+            System.out.println();
+            System.out.println(bean.getTitle());
+            System.out.println();
+            System.out.println(bean.getDate());
+            System.out.println();
+            System.out.println(bean.getContact());
+            System.out.println();
+            System.out.println(bean.getNeed());
+            System.out.println();
+            System.out.println(bean.getRequest());
+            System.out.println();
+            System.out.println(bean.getWho());
+            System.out.println();
+            System.out.println(bean.getLanguage());
+            System.out.println();
+            System.out.println(bean.getExtra());
+            System.out.println("----------------");*/
         }
 
         return beanQueuen;

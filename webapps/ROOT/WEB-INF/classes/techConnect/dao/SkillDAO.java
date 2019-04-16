@@ -27,8 +27,8 @@ public class SkillDAO extends DAO {
 
     //sets a skill to a certain user
     public void setUserSkill(skillBean bean) {
-        if(bean.getSkillID() != null && bean.getSkillID() > 0 && bean.getUserID() != null && bean.getUserID() > 0) {
-            DB.setUserSkills(bean.getSkillID(), bean.getUserID());
+        if(bean.getSkillID() != null && bean.getSkillID() > 0 && bean.getUserID() != null && bean.getUserID() > 0 && bean.getLevel() > 0 && bean.getLevel() <= 5) {
+            DB.setUserSkills(bean.getSkillID(), bean.getUserID(), bean.getLevel());
         }
     }
 
@@ -77,6 +77,7 @@ public class SkillDAO extends DAO {
         skillBean bean = new skillBean();
         bean.setSkillID(rs.getInt("skillID"));
         bean.setSkillName(rs.getString("skill_name"));
+        bean.setLevel(rs.getInt("skill_level"));
         return bean;
     }
 }
