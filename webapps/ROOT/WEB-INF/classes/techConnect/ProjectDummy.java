@@ -31,6 +31,26 @@ public class ProjectDummy {
         return beanQueuen;
     }
 
+    public List<ProjectDummyBean> getProjects(String search){
+        List<ProjectDummyBean> beanQueuen = new LinkedList<>();
+        for (int i = 0; i < 7; i++) {
+            ProjectDummyBean bean = new ProjectDummyBean();
+            bean.setPicture(getPic().get(i));
+            bean.setTitle(getTitle().get(i));
+            bean.setDate(getDate().get(i));
+            bean.setContact(getContact().get(i));
+            bean.setNeed(getNeed().get(i));
+            bean.setRequest(getRequest().get(i));
+            bean.setWho(getWhoNeed().get(i));
+            bean.setLanguage(getLanguageNeed().get(i));
+            bean.setExtra(getExtra().get(i));
+            beanQueuen.add(bean);
+        }
+
+        return beanQueuen;
+    }
+
+
     private List<String> getPic() {
         List<String> imageLinks = new LinkedList<>();
         imageLinks.add("\"assets/TechConnectCats/linktocat.png\"");
