@@ -1,5 +1,6 @@
 package techConnect;
 
+import DummyProjects.ProjectDummyBean;
 import techConnect.beans.*;
 import techConnect.dao.*;
 
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 
@@ -465,9 +468,27 @@ public class test extends HttpServlet {
 
     }
 
+    public void addDummyData() throws java.sql.SQLException {
+        ProjectDummy pd = new ProjectDummy();
+        pd.getProjects();
+        /*for (int i = 0; i < 7; i++) {
+            ProjectDummyBean bean = new ProjectDummyBean();
+            System.out.println(bean.getPicture());
+            System.out.println(bean.getTitle());
+            System.out.println(bean.getDate());
+            System.out.println(bean.getContact());
+            System.out.println(bean.getNeed());
+            System.out.println(bean.getRequest());
+            System.out.println(bean.getWho());
+            System.out.println(bean.getLanguage());
+            System.out.println(bean.getExtra());
+        }*/
+    }
+
     public static void main(String[] args) throws java.sql.SQLException {
         test tester = new test();
-        tester.testWrapper();
+        //tester.testWrapper();
+        tester.addDummyData();
     }
 
     @Override
